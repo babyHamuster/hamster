@@ -84,3 +84,37 @@ html, body {
     font-weight: 700;
     line-height: 1.2;
 }
+.reqm h1 {
+    margin: 165px 0 68px 0;
+    font-size: 45px;
+    color: #1d1d1d;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+}
+.reqm ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.reqm ul li {
+    width: 511px;
+    height: 308px;
+    font-size: 30px;
+    color: #ffffff;
+    padding: 195px 0 0 36px;
+    border-radius: 20px;
+    margin: 0 12px 24px 12px;
+}
+.reqm ul li:nth-child(1) {
+    background-image: url(../images/reqm1.png);
+}
+.reqm ul li:nth-child(2) {
+    background-image: url(../images/reqm2.png);
+}
+.reqm ul li:nth-child(3) {
+    background-image: url(../images/reqm3.png);
+}
+.reqm ul li:nth-child(4) {
+    background-image: url(../images/reqm4.png);
+}
