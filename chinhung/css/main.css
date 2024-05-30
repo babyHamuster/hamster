@@ -20,70 +20,65 @@
 html, body {
     /* font family 사용하는 서체명은 font-face 에서 사용한 이름으로 사용, sans-serif는 고딕체라는 의미 */
     font-family: "Pretendard", sans-serif;
-    font-size: 16px; /* 크기 */
+    font-size: 15px; /* 크기 */
     color: #3d3d3d; /* 색상 */
-    line-height: 1.3; /* 행간 */
+    line-height: 1.4; /* 행간 */
     font-weight: 400; /* 두께 */
+    letter-spacing: 0; /* 자간 */
     word-break: keep-all; /* 단어 줄바꿈 */
-    letter-spacing: -0.02em; /* 자간 */
 }
 .wrapper { /* 홈페이지 넓이, 가운데 정렬 */
     width: 1260px;
     margin: 0 auto;
 }
-h1 {
-    font-size: 50px;
-    font-weight: 800;
-    color: #1d1d1d;
-    text-align: center;
-    letter-spacing: -0.05em;
-    margin: 80px 0 0 0;
+header {
+    height: 100px;
 }
-.only {
-    background-image: url(../images/test_bg.png);
-    background-position: center center; /* 배경정렬 */
-    background-repeat: no-repeat; /* 반복 안함 */
-    background-size: cover; /* 영역에 꽉차게 */
-    background: url(../images/only_bg.png) no-repeat center center / cover ;
-    /* 배경에 이미지를 넣을때 한번에 선언하는 방법 */
-    height: 440px;
-    color: rgb(255,255,255,0.8);
-    text-align: center;
-}
-.only h2 {
-    font-size: 42px;
-    font-weight: 700;
-    color: #fff;
-    padding: 150px 0 10px 0;
-}
-.cj .wrapper {
+header .wrapper {
     display: flex;
     justify-content: space-between;
 }
-.cj .txt {
-    width: 570px;
+header .logo {
+    margin: 30px 0 0 0;
 }
-.cj .txt strong {
-    font-size: 40px;
-    color: #006ecd;
+header .gnb ul {
+    display: flex;
+}
+header .gnb ul li a {
+    font-size: 22px;
+    color: #1d1d1d;
+    line-height: 100px; /* header의 높이와 동일한 값 */
+    /* 행간을 100px을 주면 높이 100px안에 글자가 위아래 가운데로 정렬 */
+    display: block; /* inline 요소인 a를 block요소로 변경 */
+    padding: 0 28px; /* 위아래 0 좌우 28px */
+}
+header .gnb ul li a:hover { /* 마우스를 오버했을때 */
+    font-weight: 700;
+    color: #0657ba;
+}
+.visual {
+    background: url(../images/visual_bg.png) no-repeat center center / cover;
+   height: 700px ;
+   color: #fff ;
+   text-align: left;
+}
+.visual h2 {
     font-weight: 800;
+    font-size: 44px;
+    line-height: 1.1;
+    padding: 300px 0 25px 0;
 }
-.cj .txt h2 {
-    font-size: 40px;
+.biz .tit {
+    text-align: center;
+    margin: 150px 0 68px 0;
+}
+.biz .tit h2 {
+    font-size: 38px;
     color: #1d1d1d;
     font-weight: 800;
-    line-height: 1.1;
-    margin: 0 0 15px 0;
 }
-.cj .photo img {
-    border-radius: 45px;
-}
-.culture {
-    margin: 55px 0 50px 0;
-}
-.culture .txt {
-    margin: 275px 0 0 0;
-}
-.global .txt {
-    margin: 250px 0 0 0;
+.biz .tit p {
+    font-size: 15px;
+    color: #3d3d3d ;
+    /* margin: -10px 0 0 0; */
 }
