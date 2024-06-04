@@ -44,5 +44,27 @@ header .gnb ul li a {
 header .gnb ul li a:hover {
     color: #370371;
     font-weight: 700;
-    letter-spacing: -0.1px;
+    letter-spacing: -0.051px;
+}
+.visual {
+    height: 713px;
+    background-image:url(../images/upbg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background 속성을 한번에 선언하는 방법 */
+    background:  url(../images/upbg.png) no-repeat center center / cover ;
+    color: #fff;
+}
+.visual strong {
+    font-weight: 500;
+    padding: 139px 0 0 0;
+    display: block; /* 인라인 요소는 여백이 적용 안됨 */
+}
+.visual h2 {
+    font-size: 45px;
+
+}
+.visual h2 em {
+    font-weight: 800;
 }
