@@ -30,3 +30,19 @@ header .logo {
 header .gnb ul {
     display: flex;
 }
+/* 1차메뉴는 큼직하게 눌려야 함. 여백 및 사이즈는 a한테 줘야함 */
+header .gnb ul li a {
+    font-size: 21px;
+    color: #2d2d2d;
+    font-weight: 500;
+    padding: 30px 25px 30px 25px;
+    display: block;
+    /* padding 값을 적용하기 위해서 - a가 인라인 태그라 적용이 안됨 */
+    /* padding < 내가 늘어남 , margin 내가 멀어짐 */
+}
+/* a태그에 마우스를 오버했을때 스타일 */
+header .gnb ul li a:hover {
+    color: #370371;
+    font-weight: 700;
+    letter-spacing: -0.1px;
+}
