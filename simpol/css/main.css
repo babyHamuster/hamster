@@ -28,7 +28,7 @@ html, body {
 .community .colgroup1 .rowgroup1 {
     display: flex;
     justify-content: space-between;
-    margin: 0 0 24px 0;
+    margin: 24px 0 24px 0;
 }
 .community .colgroup2 .rowgroup2 {
     display: flex;
@@ -79,11 +79,8 @@ html, body {
 .community .txt_news_color2 strong {
     color: #fff;
 }
-.community a strong {
-    color: #1d1d1d;
-}
 .community a {
-    margin: 32px 33px;
+    margin: 24px 33px;
     display: block;
 }
 .community a h2 {
