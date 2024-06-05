@@ -1,0 +1,335 @@
+@import url(default.css);
+@import url(fonts.css);
+
+/* 글자의 스타일은 상속받음. 기본글자의 스타일은 
+모든 태그를 감싸는 html body에 선언 */
+html, body {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0em; /* 자간 */
+    line-height: 1.3; /* 배수 - 글자 크기에 1.3배 */
+    color: #3d3d3d ; /* 글자 색상 */
+    word-break: keep-all; /* 단어별로 줄바꿈 */
+}
+/* 홈페이지의 넓이를 제한하고 가운데정렬 */
+/* 홈페이지 전체를 감싸는 요소 - 가로스크롤바가 생겼을때 배경이 잘리는 현상을 방지 */
+#wrap {
+    min-width: 1260px;
+} 
+.wrapper {
+    width: 1260px;
+    margin: 0 auto; /* 가운데정렬 */
+}
+header {
+    height: 100px;
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+} 
+header .logo {
+    margin: 19px 0 0 0;
+}
+header .gnb ul {
+    display: flex;
+}
+/* 1차메뉴는 큼직하게 눌려야 함. 여백 및 사이즈는 a한테 줘야함 */
+header .gnb ul li a {
+    font-size: 21px;
+    color: #2d2d2d;
+    font-weight: 500;
+    padding: 30px 25px 30px 25px;
+    display: block;
+    /* padding 값을 적용하기 위해서 - a가 인라인 태그라 적용이 안됨 */
+    /* padding < 내가 늘어남 , margin 내가 멀어짐 */
+}
+/* a태그에 마우스를 오버했을때 스타일 */
+header .gnb ul li a:hover {
+    color: #370371;
+    font-weight: 700;
+    letter-spacing: -0.051px;
+}
+.visual {
+    height: 600px;
+    background-image:url(../images/upbg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background 속성을 한번에 선언하는 방법 */
+    background:  url(../images/upbg.png) no-repeat center center / cover ;
+    color: #fff;
+}
+.visual strong {
+    font-weight: 500;
+    padding: 130px 0 0 0;
+    display: block; /* 인라인 요소는 여백이 적용 안됨 */
+}
+.visual h2 {
+    font-size: 45px;
+
+}
+.visual h2 em {
+    font-weight: 800;
+}
+.visual h2 .yellow {
+    color: #EECC3C;
+}
+
+.introduce .art {
+    display: flex;
+    justify-content: center;
+    margin: 151px 0 0 0;
+}
+.introduce .scholarship {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 151px 0;
+    text-align: right;
+}
+.introduce .art .txt {
+    margin: 0 100px 0 50px;
+}
+.introduce .scholarship .txt {
+    margin: 0 50px 0 100px;
+}
+.introduce h2 {
+    font-weight: 800;
+    color: #1d1d1d;
+    font-size: 45px;
+    letter-spacing: -0.02em;
+    margin: 69px 0 0 0;
+}
+.introduce strong {
+    font-weight: 700;
+    color: #1d1d1d;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin: 8px 0 14px 0;
+    display: block; /* margin을 적용하게 하는 방법 */
+}
+.introduce p {
+    font-weight: 400;
+    font-size: 16px;
+}
+.introduce .btn {
+    display: flex;
+    margin: 32px 0 0 0;
+    /* a태그는 원래 좌우로 배치함
+    하지만 사이사이 여백이 발생
+    여백을 삭제하려면 flex 좌우로 배치*/
+}
+.introduce .scholarship .btn {
+    justify-content: flex-end ;
+    /* flex로 배치한 버튼을 오른쪽 정렬
+    tsxt-align 명령을 받지 않음 */
+}
+
+.introduce .btn a {
+    border: 1px solid #1d1d1d;
+    padding: 6px 15px;
+    display: block; /* padding값을 적용하기 위해서 */
+    margin: 0 10px 0 0;
+}
+.introduce .btn a:hover{
+    /* 오버전에 border가 있었다면 오버후에도 border을 주는 것이 사이즈가 유지됨*/
+    border: 1px solid #3D3D3D;
+    background-color: #3D3D3D ;
+    color: #fff;
+}
+/* btn 클래스 안에 있는 a중에서 마지막 a */
+.introduce .btn a:last-child {
+    margin-right: 0;  
+}
+.introduce .art {
+    margin: 158px 97px 20px 0;
+}
+
+.introduce .art .photo {
+    margin: 0 97px 0 0;
+}
+.introduce .scholarship .photo {
+    margin: 0 0 0 97px;
+}
+.promotion {
+    /* 배경보다 promotion 콘텐츠 길이가 더 길다.. 배경의 위치를 정확하게 - 가운데 상단
+    background-size 주면 안됨. 디자인한 사이즈대로 들어가야 함*/
+    background: url(../images/down_bg.png) no-repeat center top;
+}
+.promotion .news {
+    color: rgba(255, 255, 255, 0.9);
+    padding: 160px 0 128px 0;
+}
+.promotion .news .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.promotion .news .tit {
+    margin: 0 0 0 25px;
+}
+.promotion .news .tit h2 {
+    font-weight: 800;
+    color: #fff;
+    font-size: 40px;
+    letter-spacing: -0.02em;
+}
+.promotion .news .tit p {
+    margin: 16px 0 30px 0;
+}
+.promotion .news .list {
+    width: 655px;
+}
+.promotion .news .list ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+/* .promotion .news .list ul li:last-child 
+위에 짝대기 올릴때는 보더탑으로 한다음에 마지막에 라스트 차일드로 밑을 메꿔준다.*/
+.promotion .news .list ul li a {
+    /* display:flex는 해당 요소를 block요소로 만들어서 넓이를 100%로 만듬 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 위아래 가운데 정렬 */
+    padding: 21.6px 26px
+}
+/* a태그에 오버했을대 strong 태그는 */
+.promotion .news .list ul li a:hover strong {
+    font-weight: 800;
+}
+.promotion .news .more {
+    border: 1px solid rgba(255, 255, 255 ,0.7);
+    padding: 6px 15px;
+    display: inline-block;
+    position: absolute;
+    left: 25px ;
+    top: 106px ;
+    /* position: absolute는 반드시
+    좌우위치 left right
+    위아래 위치 top bottom 값이 필수고
+    이 값이 어디서 부터 시작하는지 계산
+    기준이 필요함
+    나를 감싸는 요소 중에서 position 속성을 가진
+    요소를 기준으로 정렬 
+    ----- .wrapper를 기준으로 정렬 */
+}
+.promotion .news .wrapper {
+    position: relative;
+    /* more 정렬의 기준
+    more을 감싸는 wrapper 기준으로 정렬 
+    wrapper에 position을 줘야함 
+    position 속성값 중에서 유일하게
+    relative 값만이 요소에 아무런 영향을
+    끼치지 않음 */
+}
+.promotion .news .more:hover{
+    border: 1px solid #fff;
+    background-color: #fff;
+    color: #370371;
+}
+.promotion .movie .tit h2 {
+    font-weight: 800;
+    color: #fff;
+    font-size: 40px;
+    letter-spacing: -0.02em;
+    margin: 0 0 38px 25px;
+}
+.promotion .movie .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.promotion .movie .list ul li {
+    width: 404px;
+}
+.promotion .movie .list ul li a {
+    display: block;
+    /* a는 인라인태그, 내부에는 block태그 
+    a와 li의 영역 크기를 동일하게 주기 위해
+    a도 block요소로 만듬 */
+}
+.promotion .movie .list ul li a .photo img {
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    /* 이미지에 테두리를 주면 이미지 밖으로 테두리 생성
+    이미지는 감싸는 영역의 크기를 이미지보다 작게해도
+    이미지가 자동으로 줄어들지 않음. 본인의 사이즈대로 나타남
+    글자는 줄바꿈을 함 */
+    width: calc(100% - 2px);
+    /* calc < 계산할때 쓰는것 . 꼭 띄어쓰기 해야함!! */
+    /* 나를 감싸는 photo 넓이의 100% - 테두리는 별도
+    넓이 100%에서 테두리값을 뺀 넓이를 주면 됨 */
+}
+.promotion .movie .list ul li a strong {
+    color: #3d3d3d;
+    font-weight: 500;
+    font-size: 15px;
+    display: block; /* margin값 적용 */
+    margin: 5px 0 0 0;
+}
+.promotion .movie .list ul li a h3 {
+    color: #1d1d1d;
+    font-weight: 700;
+    font-size: 20px;
+}
+/* 마우스를 오버시
+스타일 변경대상이 되는 요소의 스타일이 정의된 선택자를 그대로 복사해야함 
+만약에 그냥 body 라던가 다른 스타일을 상속 받은거면 
+a에게 스타일을 주면 됨 */
+.promotion .movie .list ul li a:hover .photo img {
+    border: 3px solid #C58BFF;
+}
+.promotion .movie .list ul li a:hover strong {
+    color: #C58BFF;
+}
+.promotion .movie .list ul li a:hover h3 {
+    color: #C58BFF;
+}
+footer {
+    margin: 137px 0 0 0;
+    padding: 74px 0 89px 0;
+    background-color: #F8F8F8;
+    color: rgba(29, 29, 29, 0.6);
+}
+footer .f_nav ul {
+    display: flex;
+}
+footer .f_nav ul li {
+    margin: 0 35px 0 0;
+}
+footer .f_nav ul li.privacy {
+    font-weight: 800;
+}
+footer .f_info {
+    margin: 25px 0 50px 0;
+}
+/* footer, info adress , span
+이렇게 선택자를 쓰면 footer안에 info라는 클래스명을
+갖은 요소안에 있는 adress와 이 html내부의 모든 span이 되어버림*/
+footer .f_info address,
+footer .f_info span {
+    margin: 0 28px 0 0;
+    display: inline-block; 
+    /* adress는 블럭태그인데 span태그의 좌우에 배치되라고,
+    span은 margin을 적용시키려고.. */
+}
+footer .copyright {
+    color: rgba(22,22,22, 0.3);
+} 
+footer .wrapper {
+    /* footer  .family 정렬의 기준*/
+    position: relative;
+}
+footer .family {
+    position: absolute;
+    right: 0;
+    top: 130px;
+    /* footer의 wrapper을 기준으로 */
+}
+footer .family button {
+    border: 1pt solid rgba(61,61,61,0.6);
+    width: 200px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 19px;
+    align-items: center;
+    /* 내부 두 요소를 좌우 끝단에 배치하기 위해서 */
+}
