@@ -291,5 +291,5 @@ footer .f_info span {
     span은 margin을 적용시키려고.. */
 }
 footer .copyright {
-    color: rgba(22,22,22 0.3);
+    color: rgba(22,22,22, 0.3);
 } 
