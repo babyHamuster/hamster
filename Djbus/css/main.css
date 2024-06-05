@@ -320,7 +320,7 @@ footer .wrapper {
 footer .family {
     position: absolute;
     right: 0;
-    top: 134px;
+    top: 130px;
     /* footer의 wrapper을 기준으로 */
 }
 footer .family button {
