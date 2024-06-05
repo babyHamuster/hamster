@@ -21,3 +21,78 @@ html, body {
     width: 1260px;
     margin: 0 auto; /* 가운데정렬 */
 }
+.community .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.community .colgroup1 .rowgroup1 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 24px 0;
+}
+.community .colgroup2 .rowgroup2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 0 0 0;
+}
+.community .txt_news {
+    width: 297px;
+    height: 197px;
+    background-color: #f3f3f3;
+}
+.community .txt_news a {
+    height: 197px;
+}
+.community .txt_news.color1 {
+    background-color: #6fb410;
+    color: #fff;
+}
+.community .txt_news.color2 {
+    background-color: #006ddc;
+    color: #fff;
+}
+.community .photo_news {
+    width: 618px ;
+    height: 325px ;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: #fff;
+}
+.community .photo_news a {
+    height: 325px ;
+    display: flex;
+    flex-direction: column; /* 세로정렬 */
+    justify-content: flex-end; /* 상단정렬 */
+}
+/* <div class="photo_news bg1> 
+하나의 요소에 두개의 이름이 들어간 경우 */
+.community .photo_news.bg1 {
+    background-image: url(../images/community2.png);
+}
+.community .photo_news.bg2 {
+    background-image: url(../images/community1.png);
+}
+.community .txt_news_color1 strong {
+    color: #fff;
+}
+.community .txt_news_color2 strong {
+    color: #fff;
+}
+.community a strong {
+    color: #1d1d1d;
+}
+.community a {
+    margin: 32px 33px;
+    display: block;
+}
+.community a h2 {
+    font-size: 22px;
+    font-weight: 700;
+} 
+.community a .name {
+    display: flex;
+}
+.community a .name span:first-child {
+    margin: 0 33px 0 0;
+}

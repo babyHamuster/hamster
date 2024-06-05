@@ -4,6 +4,7 @@
     * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 li { /* li앞 동그라미 삭제 */
     list-style: none;

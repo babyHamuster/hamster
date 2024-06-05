@@ -9,33 +9,9 @@
 }
 @font-face {
 	font-family: 'NanumSquarNeo';
-	font-weight: 300;
-	font-style: normal;
-	src: url(../fonts/NanumSquareNeoTTF-bRg.eot) format('woff2'), 
-    url(../fonts/NanumSquareNeoTTF-bRg.woff) format('woff2'), 
-    url(../fonts/NanumSquareNeoTTF-bRg.woff2) format('woff');
-}
-@font-face {
-	font-family: 'NanumSquarNeo';
-	font-weight: 500;
-	font-style: normal;
-	src: url(../fonts/NanumSquareNeoTTF-cBd.eot) format('woff2'), 
-    url(../fonts/NanumSquareNeoTTF-cBd.woff) format('woff2'), 
-    url(../fonts/NanumSquareNeoTTF-cBd.woff2) format('woff');
-}
-@font-face {
-	font-family: 'NanumSquarNeo';
 	font-weight: 700;
 	font-style: normal;
 	src: url(../fonts/NanumSquareNeoTTF-dEb.eot) format('woff2'), 
     url(../fonts/NanumSquareNeoTTF-dEb.woff) format('woff2'), 
     url(../fonts/NanumSquareNeoTTF-dEb.woff2) format('woff');
-}
-@font-face {
-	font-family: 'NanumSquarNeo';
-	font-weight: 900;
-	font-style: normal;
-	src: url(../fonts/NanumSquareNeoTTF-eHv.eot) format('woff2'), 
-    url(../fonts/NanumSquareNeoTTF-eHv.woff) format('woff2'), 
-    url(../fonts/NanumSquareNeoTTF-eHv.woff2) format('woff');
 }
