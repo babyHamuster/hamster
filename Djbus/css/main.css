@@ -165,6 +165,9 @@ header .gnb ul li a:hover {
     display: flex;
     justify-content: space-between;
 }
+.promotion .news .tit {
+    margin: 0 0 0 25px;
+}
 .promotion .news .tit h2 {
     font-weight: 800;
     color: #fff;
@@ -184,15 +187,15 @@ header .gnb ul li a:hover {
 .promotion .news .tit p {
     margin: 16px 0 30px 0;
 }
-.promotion .list {
+.promotion .news .list {
     width: 655px;
 }
-.promotion .list ul li {
+.promotion .news .list ul li {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-/* .promotion .list ul li:last-child 
+/* .promotion .news .list ul li:last-child 
 위에 짝대기 올릴때는 보더탑으로 한다음에 마지막에 라스트 차일드로 밑을 메꿔준다.*/
-.promotion .list ul li a {
+.promotion .news .list ul li a {
     /* display:flex는 해당 요소를 block요소로 만들어서 넓이를 100%로 만듬 */
     display: flex;
     justify-content: space-between;
@@ -200,6 +203,93 @@ header .gnb ul li a:hover {
     padding: 21.6px 26px
 }
 /* a태그에 오버했을대 strong 태그는 */
-.promotion .list ul li a:hover strong {
+.promotion .news .list ul li a:hover strong {
     font-weight: 800;
 }
+.promotion .movie .tit h2 {
+    font-weight: 800;
+    color: #fff;
+    font-size: 40px;
+    letter-spacing: -0.02em;
+    margin: 0 0 38px 25px;
+}
+.promotion .movie .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.promotion .movie .list ul li {
+    width: 404px;
+}
+.promotion .movie .list ul li a {
+    display: block;
+    /* a는 인라인태그, 내부에는 block태그 
+    a와 li의 영역 크기를 동일하게 주기 위해
+    a도 block요소로 만듬 */
+}
+.promotion .movie .list ul li a .photo img {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* 이미지에 테두리를 주면 이미지 밖으로 테두리 생성
+    이미지는 감싸는 영역의 크기를 이미지보다 작게해도
+    이미지가 자동으로 줄어들지 않음. 본인의 사이즈대로 나타남
+    글자는 줄바꿈을 함 */
+    width: calc(100% - 2px);
+    /* calc < 계산할때 쓰는것 . 꼭 띄어쓰기 해야함!! */
+    /* 나를 감싸는 photo 넓이의 100% - 테두리는 별도
+    넓이 100%에서 테두리값을 뺀 넓이를 주면 됨 */
+}
+.promotion .movie .list ul li a strong {
+    color: #3d3d3d;
+    font-weight: 500;
+    font-size: 15px;
+    display: block; /* margin값 적용 */
+    margin: 5px 0 0 0;
+}
+.promotion .movie .list ul li a h3 {
+    color: #1d1d1d;
+    font-weight: 700;
+    font-size: 20px;
+}
+/* 마우스를 오버시
+스타일 변경대상이 되는 요소의 스타일이 정의된 선택자를 그대로 복사해야함 
+만약에 그냥 body 라던가 다른 스타일을 상속 받은거면 
+a에게 스타일을 주면 됨 */
+.promotion .movie .list ul li a:hover .photo img {
+    border: 1px solid #162343;
+}
+.promotion .movie .list ul li a:hover strong {
+    color: #162343;
+}
+.promotion .movie .list ul li a:hover h3 {
+    color: #162343;
+}
+footer {
+    margin: 137px 0 0 0;
+    padding: 74px 0 89px 0;
+    background-color: #F8F8F8;
+    color: rgba(29, 29, 29, 0.6);
+}
+footer .f_nav ul {
+    display: flex;
+}
+footer .f_nav ul li {
+    margin: 0 35px 0 0;
+}
+footer .f_nav ul li.privacy {
+    font-weight: 800;
+}
+footer .f_info {
+    margin: 25px 0 50px 0;
+}
+/* footer, info adress , span
+이렇게 선택자를 쓰면 footer안에 info라는 클래스명을
+갖은 요소안에 있는 adress와 이 html내부의 모든 span이 되어버림*/
+footer .f_info address,
+footer .f_info span {
+    margin: 0 28px 0 0;
+    display: inline-block; 
+    /* adress는 블럭태그인데 span태그의 좌우에 배치되라고,
+    span은 margin을 적용시키려고.. */
+}
+footer .copyright {
+    color: rgba(22,22,22 0.3);
+} 
