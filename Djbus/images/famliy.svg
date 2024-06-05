@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="20" viewBox="0 0 22 20">
+  <defs>
+    <clipPath id="clip-path">
+      <rect y="1" width="22" height="20" fill="none"/>
+    </clipPath>
+    <pattern id="pattern" width="1" height="1" patternTransform="matrix(1, 0, 0, -1, 0, 44)" viewBox="0 0 22 22">
+      <image preserveAspectRatio="none" width="22" height="22" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAAXNSR0IArs4c6QAAAlVJREFUeF7tml1OwlAUBm/jRtgZEH1gF8IueCDanehScB8mVYhNGkPlR3rnnGR8h6+ZudNApSn+oQQadN3xogD4EChAATABeN4CFAATgOctQAEwAXjeAhQAE4DnLUABMAF43gIUABOA5y1AATABeN4CFAATgOctQAEwAXjeAhQAE4DnLUABMAF43gIUABOA5y1AATABeN4CFAATgOctQAG3E5g/rl6bpny0u+369ndhX5m2gAP8UsrigK9pyiarhJQChvD785tVQjoBp+BnlpBKwF/ws0pII+AS+BklpBBwDfxsEsILuAV+JgmhBVwAf/8Dezb2aT76p6OwAi6B//0lbFk+y757KG+llJQSQgq4FH67274fTv5isZpllRBOwLXw+1tPVgmhBNwKP7OEMAL+Cz+rhBAC7gU/owRcwL3hZ5OACpgKfiYJmICp4WeRgAioBT+DhOoCasOPLqGqAAp+ZAnVBNDwo0qoIiAK/IgSJhcQDX40CZMLWDyt1l1Xnkee1+8Pj5T7p5q1f6Fz7gFe05Vl+7Jtp7yuyQUcHxefloDCP1dCDfjH3zRNaXf43r8khIA/JqEW/KoCBiXMydvO2IHrb0dNVzZT33aG11CtgOFpa9tt/7/cWgGG3akuICwJ6MIUAIHvZxWgAJgAPG8BCoAJwPMWoACYADxvAQqACcDzFqAAmAA8bwEKgAnA8xagAJgAPG8BCoAJwPMWoACYADxvAQqACcDzFqAAmAA8bwEKgAnA8xagAJgAPG8BCoAJwPMWoACYADxvAQqACcDzFgAL+AJVWh9wiE8L/wAAAABJRU5ErkJggg=="/>
+    </pattern>
+  </defs>
+  <g id="스크롤_그룹_1" data-name="스크롤 그룹 1" transform="translate(0 -1)" clip-path="url(#clip-path)" style="isolation: isolate">
+    <rect id="keyboard_arrow_up_24dp_FILL0_wght400_GRAD0_opsz48" width="22" height="22" fill="url(#pattern)"/>
+  </g>
+</svg>
