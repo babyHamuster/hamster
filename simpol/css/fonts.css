@@ -1,30 +1,41 @@
+@import url(default.css); /* default.css 불러오기 */
 @font-face {
-    font-family: 'Pretendard';
-    font-weight: 400;
-    font-display: swap;
-    src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff) format('woff');
+	font-family: 'NanumSquarNeo';
+	font-weight: 100;
+	font-style: normal;
+	src: url(../fonts/NanumSquareNeoTTF-aLt.eot) format('woff2'), 
+    url(../fonts/NanumSquareNeoTTF-aLt.woff) format('woff2'), 
+    url(../fonts/NanumSquareNeoTTF-aLt.woff2) format('woff');
 }
 @font-face {
-    font-family: 'Pretendard';
-    font-weight: 700;
-    font-display: swap;
-    src: local('Pretendard Bold'), url(../fonts/Pretendard-Bold.woff2) format('woff2'), url(../fonts/Pretendard-Bold.woff) format('woff');
+	font-family: 'NanumSquarNeo';
+	font-weight: 300;
+	font-style: normal;
+	src: url(../fonts/NanumSquareNeoTTF-bRg.eot) format('woff2'), 
+    url(../fonts/NanumSquareNeoTTF-bRg.woff) format('woff2'), 
+    url(../fonts/NanumSquareNeoTTF-bRg.woff2) format('woff');
 }
 @font-face {
-    font-family: 'Pretendard';
-    font-weight: 800;
-    font-display: swap;
-    src: local('Pretendard ExtraBold'), url(../fonts/Pretendard-ExtraBold.woff2) format('woff2'), url(../fonts/Pretendard-ExtraBold.woff) format('woff');
+	font-family: 'NanumSquarNeo';
+	font-weight: 500;
+	font-style: normal;
+	src: url(../fonts/NanumSquareNeoTTF-cBd.eot) format('woff2'), 
+    url(../fonts/NanumSquareNeoTTF-cBd.woff) format('woff2'), 
+    url(../fonts/NanumSquareNeoTTF-cBd.woff2) format('woff');
 }
 @font-face {
-    font-family: 'Pretendard';
-    font-weight: 500;
-    font-display: swap;
-    src: local('Pretendard Medium'), url(../fonts/Pretendard-Medium.woff2) format('woff2'), url(../fonts/Pretendard-Medium.woff) format('woff');
+	font-family: 'NanumSquarNeo';
+	font-weight: 700;
+	font-style: normal;
+	src: url(../fonts/NanumSquareNeoTTF-dEb.eot) format('woff2'), 
+    url(../fonts/NanumSquareNeoTTF-dEb.woff) format('woff2'), 
+    url(../fonts/NanumSquareNeoTTF-dEb.woff2) format('woff');
 }
 @font-face {
-    font-family: 'Pretendard';
-    font-weight: 300;
-    font-display: swap;
-    src: local('Pretendard Light'), url(../fonts/Pretendard-Light.woff2) format('woff2'), url(../fonts/Pretendard-Light.woff) format('woff');
+	font-family: 'NanumSquarNeo';
+	font-weight: 900;
+	font-style: normal;
+	src: url(../fonts/NanumSquareNeoTTF-eHv.eot) format('woff2'), 
+    url(../fonts/NanumSquareNeoTTF-eHv.woff) format('woff2'), 
+    url(../fonts/NanumSquareNeoTTF-eHv.woff2) format('woff');
 }
