@@ -35,6 +35,12 @@ html, body {
     justify-content: space-between;
     margin: 24px 0 0 0;
 }
+.community .rowgroup1 span {
+    margin: 0 0 14px 0;
+}
+.community .rowgroup2 span {
+    margin: 0 0 14px 0;
+}
 .community .txt_news {
     width: 297px;
     height: 197px;
@@ -64,6 +70,7 @@ html, body {
     display: flex;
     flex-direction: column; /* 세로정렬 */
     justify-content: flex-end; /* 상단정렬 */
+    
 }
 /* <div class="photo_news bg1> 
 하나의 요소에 두개의 이름이 들어간 경우 */
