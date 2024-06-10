@@ -139,7 +139,7 @@ header .gnb ul li a:hover {
 }
 .culture .list ul li P{
     width: 297px ;
-    height: 186px ;
+
 }
 .culture .list ul li a h3 {
     color: #1d1d1d;
@@ -147,6 +147,190 @@ header .gnb ul li a:hover {
     font-weight: 600;
     margin: 9px 0 9px 0 ;
 }
+.culture .list ul li a p {
+    color: #3d3d3d;
+    font-size: 16px ;
+    font-size: 300;
+}
+.culture .list ul li a .photo {
+    overflow: hidden;
+    /* 이미지 하단에는 글자의 행간앖이 들어감. 그래서 하단ㅌ에 여백이 조금발생 
+    이 여백을 없애고 싶다면 이미지를 감싸는 요소가 글자크기에 행간에 값을 줘야함 */
+    font-size: 0;
+    line-height: 0;
+        border-radius: 10px;
+    /* 이미지가 photo의 크기보다 커지면
+    넘치는 부분 숨김*/
+}
+.culture .list ul li a .photo img {
+    transition: 0.5s;
+}
+.culture .list ul li a:hover .photo img {
+    transform: scale3d(1.05, 1.05, 1)
+}
+.culture .wrapper {
+    position: relative;
+    /* .culture .more a 정렬의 중심 */
+}
+.culture .more {
+    /* .culture .wrapper 을 기준으로 정렬 */
+    position: absolute;
+    right: 0;
+    top: 67px ;
+}
+.culture .more a {
+    border-bottom: 1px solid #1d1d1d ;
+    display: block;
+    align-items: center;
+    background: url(../images/more_.svg) no-repeat right center;
+    /* 오른쪽에서 22px 떨어져서 있고, 위아래 가운데*/
+     /*    transition: 0.1s;
+      나중에 a에 class가 추가되거나 또는 오버를 해서 스타일이 변경된다면 
+    0.5초의 시간동안 천천히 변하기*/
+}
+.culture .more a:hover {
+    /*  border-bottom: 1px solid #1d1d1d ; 이렇게 선언된상태에서
+    오버했을때 색상만 변한다면 반드시 border-color라고 정확하게
+    해당 속성명을 써줘야함; border라고 색상만 선언하면 모든게 취소됨. */
+    border-bottom: 0.5px solid #FACF67 ;
+    display: block;
+    align-items: center;
+    padding: 0 0 2px 0;
+    background-image: url(../images/more_y.svg)
+}
+.culture .more a span {
+    padding: 0 22px 2px 0;
+    display: block;
+}
+.culture .more a:hover span {
+    color: #FACF67;
+    font-weight: 600;
+}
+
+.tour {
+    margin: 125px 0 26px 0;
+}
+.tour .tit h2 {
+    color: #1d1d1d;
+    font-weight: 800;
+    font-size: 32px;
+    margin: 0 0 5px 0;
+}
+.tour .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.tour .list ul li {
+    width: 190px;
+    height: 550px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgba(255, 255, 255, 0.8) ;
+}
+/* li중에서 active 클래스를 갖고 있는 li (띄어쓰기 주의) */
+.tour .list ul li.active {
+    width: 618px;
+}
+.tour .list ul li.tour1 {
+    background-image: url(../images/tour1.png);
+}
+.tour .list ul li.tour2 {
+    background-image: url(../images/tour2.png);
+}
+.tour .list ul li.tour3 {
+    background-image: url(../images/tou3.png);
+}
+.tour .list ul li.tour4 {
+    background-image: url(../images/you4.png);
+}
+.tour .list ul li a {
+    height: 550px;
+    display: flex;
+    padding: 0 5px 63px 5px ;
+    flex-direction: column ;
+    justify-content: flex-end ;
+    text-align: left;
+}
+.tour .list ul li.active a {
+    padding: 0 33px 32px 33px;
+    text-align: left;
+}
+.tour .list ul li a p {
+    display: none; /* 숨김 (공간차지 안함) */
+}
+.tour .list ul li.active a p {
+    display: block;
+    /* 나타남 ; display:none ;으로 숨기는 경우
+    display/inline/block/flex 줘도 모두 나타남*/
+}
+.tour .list ul li a h3 {
+    font-weight: 800;
+    font-size: 23px;
+    color: #fff;
+}
+.tour .wrapper {
+    position: relative; /* .tour .more 정렬의 기준 */
+}
+.tour .more {
+    position: absolute;
+    right: 0;
+    top: 5px;
+}
+.tour .more a {
+    padding: 10px 45px 10px 20px ;
+    border: 1px solid #9f9f9f;
+    border-radius: 20px;
+    display: inline-block;
+    background: url(../images/more_.svg) no-repeat right 22px top 14px ;
+}
+.tour .more a:hover {
+    border-color: #FACF67;
+    background-color: #FACF67;
+    background-image: url(../images/more_w.svg);
+    color: #fff;
+}
+.community {
+    height: 1021px ;
+    background: url(../images/community_bg.png) no-repeat center center / cover ;
+    color: #fff;
+    margin: 194px 0 0 0;
+}
+.community .wrapper {
+    display: flex;
+}
+.community .tit {
+    width: 296px;
+    margin: 334px 0 0 0;
+}
+.community .tit h2 {
+    font-weight: 800;
+    font-size: 77px;
+    color: #fff;
+}
+.community .tit strong {
+    font-weight: 300;
+    font-size: 16px;
+    color: #fff;
+    margin: 0 0 0 10px;
+    display: block; /* margin을 적용해주기 위한 값*/
+}
+.community .news {
+    background-color: rgba(46, 46, 46, 0.44);
+    border-radius: 30px;
+    backdrop-filter: blur(20px); /* 박스 뒷배경 흐리게 <bod> */
+    width: 366px ;
+    margin: 511px ;
+    height:  366px;
+    margin: 334px 0 0 35px ;
+    padding: 0 35px ;
+}
+.community .news h3 {
+    font-weight: 800;
+    font-size: 26px;
+    color: #fff;
+    margin: 58px 0 34px 0 ;
+}
 footer {
-    margin: 500px;
+    margin-top: 500px;
 }
