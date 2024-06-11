@@ -1,0 +1,181 @@
+@import url(defalut.css);
+@import url(fonts.css);
+
+/* 글자의 스타일은 상속받음. 기본글자의 스타일은 
+모든 태그를 감싸는 html body에 선언 */
+html, body {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0em; /* 자간 */
+    line-height: 1.2; /* 배수 - 글자 크기에 1.3배 */
+    color: #3d3d3d ; /* 글자 색상 */
+    word-break: keep-all; /* 단어별로 줄바꿈 */
+}
+/* 홈페이지의 넓이를 제한하고 가운데정렬 */
+/* 홈페이지 전체를 감싸는 요소 - 가로스크롤바가 생겼을때 배경이 잘리는 현상을 방지 */
+#wrap {
+    min-width: 1260px;
+} 
+.wrapper {
+    width: 1260px;
+    margin: 0 auto; /* 가운데정렬 */
+}
+@media screen and (max-width:640px) { 
+        /* 640이하에서 만 우선 적용 
+        선택자가 동일해야함..    
+        pc버전 스타일과 mobile버전 스타일이 동시에 적용되는 것이라
+        변경되는 요소인 스타일을 적용 */
+        html, body {
+            font-size: 9px;
+        }
+        #wrap {
+            min-width: 100%; /* 최소넓이 꽉차게 */
+        } 
+        .wrapper {
+            width: auto; 
+            /* div 요소의 속성대로 알아서주기
+            100%를 주면 margin이 좌우로 20px씩 들어가기 때문에
+            실제 넓이가 100% + 40px 사이즈가 넘이게됨 
+            auto로 주면 알아서 여백까지 해서 꽉차게 들어감 */
+            margin: 0 20px; /* 좌우의 여백을 20px */
+        }
+}/* media */
+.eco h2 {
+    color: #1d1d1d;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 1.1;
+    margin: 76px 0 40px 0;
+}
+.eco ul {
+    display: flex;
+    justify-content: space-between;
+}
+.eco ul li {
+    width: 404px;
+}
+.eco ul li a h3 {
+    color: #1d1d1d;
+    font-size: 25px;
+    font-weight: 800;
+    margin: 7px 0 9px 0;
+}
+@media screen and (max-width:640px) {
+    .eco h2 {
+        font-size: 26px;
+        margin: 56px 0 26px 0;
+    }
+    .eco ul {
+        display: flex;
+        justify-content: space-between;
+    }
+    .eco ul li {
+        width: calc(50% - 8px);
+        /* 두개의 li가 반반들어가는데 사이에 여백이 16px 고정으로 들어감 
+           (100% * li의 갯수)- ( 사이여백의 총합 * li갯수 ) 
+           (100%*2) - (16px * 1 ) 
+           50% - 8px  
+           퍼센트와 px 두 단위를 동시에 계산하는 계산식 
+           calc( 50% - 8px ) 반드시 - , + 같은 기호 앞뒤로 여백이 있어야함. */
+    }
+    .eco ul li:last-child { /* 세개로 나오다가 2개만 나옴 - 마지막 숨김 */
+        display: none;
+    }
+    /* 글자는 넓이가 부족하면 줄이 바뀜 하지만 아래는
+    넓이를 주지 않으면 넓이가 바뀌지 않음 
+    아무리 이미지를 감싸는 영역의 넓이가 줄어도
+    이미지는 삐져나옴 */
+    .eco ul li a .photo img {
+        width: 100%;
+        /* 넓이만 줌 높이는 비율에 맞게 알아서 들어감
+        넓이와 높이를 동시에 선언하면 비율에 맞지않게 깨질 수도 있음
+        100% - 이미지를 감싸는 요소의 넓이의 100%
+        ==> 만약 이미지의 사이즈가 더 작다면 늘어감 */
+    }
+    .eco ul li a h3 {
+        color: #1d1d1d;
+        font-size: 15px;
+        font-weight: 800;
+        margin: 4px 0 1px 0;
+    }
+}
+
+.pure {
+    background: url(../images/pure_bg.png) no-repeat center center / cover ;
+    color: #fff ;
+    height: 818px ;
+    margin: 113px 0 0 0;
+    text-align: center;
+}
+.pure h2 {
+    font-weight: 800;
+    font-size: 60px;
+    padding: 111px 0 23px 0;
+}
+.pure ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 59px 0 0 0;
+}
+.pure ul li {
+    width: 297px;
+    height: 323px;
+    border-radius: 20px;
+}
+@media screen and (max-width:640px) {
+    .pure {
+        margin: 70px 0 0 0;
+        height: auto ;
+        padding: 45px 0 82px 0;
+        /* 모바일에서 높이는 계속 바뀜
+        높이를 지정해주는 것이 아니라 콘텐츠 하단에 여백을 줌*/
+    }
+    .pure h2 {
+        font-size: 20px;
+        padding: 45px 0 4px 0;
+
+    }
+    .pure ul {
+        margin: 24px 0 0 0;
+        flex-wrap: wrap; /* 여러줄 허용 */
+        gap: 16px ;
+    }
+    .pure ul li {
+        width: calc(50% - 8px);
+        height: 152px;
+        border-radius: 20px;
+    }
+} /* media */
+.tech {
+    margin: 103px ;
+}
+.tech .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.tech strong {
+    font-size: 30px ;
+    font-weight: 300;
+    color: #1d1d1d;
+    margin: 77px 0 19px 0;
+    display: block;
+}
+.tech h2 {
+    font-size: 60px ;
+    font-weight: 800;
+    color: #1d1d1d;
+    line-height: 1;
+
+}
+.tech p {
+    width: 486;
+    margin: 42px 0 30px 0;
+}
+@media screen and (max-width:640px) {
+    .tech .wrapper {
+        display: block; 
+        /* flex를 해제하기 위해서는 dispaly의 다른 속성을 선언
+        inline, inline block, none 제일 만만한거 block*/
+    }
+}
