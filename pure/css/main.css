@@ -182,6 +182,6 @@ html, body {
         width: auto; /* 넓이 해제 */
     }
     .tech .photo img {
-        
+        width: 100%;
     }
 }
