@@ -178,4 +178,7 @@ html, body {
         /* flex를 해제하기 위해서는 dispaly의 다른 속성을 선언
         inline, inline block, none 제일 만만한거 block*/
     }
+    .tech p {
+        width: auto; /* 넓이 해제 */
+    }
 }
