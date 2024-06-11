@@ -165,6 +165,14 @@ header .gnb ul li a:hover {
 .culture .list ul li a .photo img {
     transition: 0.5s;
 }
+.culture .list ul li a:hover h3 {
+    color: #e0c37f;
+    font-weight: 600;
+}
+.culture .list ul li a:hover p {
+    color: #e0c37f;
+    font-weight: 600;
+}
 .culture .list ul li a:hover .photo img {
     transform: scale3d(1.05, 1.05, 1)
 }
@@ -243,6 +251,7 @@ header .gnb ul li a:hover {
 }
 .tour .list ul li.tour4 {
     background-image: url(../images/you4.png);
+
 }
 .tour .list ul li a {
     height: 550px;
@@ -250,7 +259,7 @@ header .gnb ul li a:hover {
     padding: 0 5px 63px 5px ;
     flex-direction: column ;
     justify-content: flex-end ;
-    text-align: left;
+    text-align: center;
 }
 .tour .list ul li.active a {
     padding: 0 33px 32px 33px;
@@ -318,18 +327,67 @@ header .gnb ul li a:hover {
 .community .news {
     background-color: rgba(46, 46, 46, 0.44);
     border-radius: 30px;
-    backdrop-filter: blur(20px); /* 박스 뒷배경 흐리게 <bod> */
-    width: 366px ;
+    backdrop-filter: blur(3px); /* 박스 뒷배경 흐리게 <bod> */
+    width: 404px ;
     margin: 511px ;
-    height:  366px;
-    margin: 334px 0 0 35px ;
+    height:  404px;
+    margin: 300px 0 0 35px ;
     padding: 0 35px ;
 }
 .community .news h3 {
     font-weight: 800;
     font-size: 26px;
     color: #fff;
-    margin: 58px 0 34px 0 ;
+    margin: 60px 0 24px 0 ;
+}
+.community .news ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.community .news ul li a {
+    display: flex;
+    justify-content: space-between;
+    padding: 11px 0 11px 0;
+}
+.community .news ul li a strong {
+    color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+}
+.community .news ul li a:hover {
+    color: #FACF67;
+    font-weight: 600;
+}
+.community .news ul li a:hover strong { 
+    color: #FACF67;
+    font-weight: 600;
+}
+.community .link {
+    width: 404px;
+    margin: 301px 0 0 24px ;
+    
+}
+.community .link ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    gap: 24px; /* li 사이의 여백 */
+}
+
+.community .link ul li {
+    width: 190px;
+    height: 190px;
+    background-color: rgba(46, 46, 46, 0.44);
+    border-radius: 30px;
+    backdrop-filter: blur(3px); /* 박스 뒷배경 흐리게 <bod> */
+}
+.community .link ul li a {
+    display: block;
+    height: 171px;
+    padding: 31px;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 800;
+
 }
 footer {
     margin-top: 500px;
