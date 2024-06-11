@@ -434,6 +434,24 @@ footer .f_nav ul {
 }
 footer .f_nav ul li {
     color: rgba(255,255,255, 0.8);
+    position: relative;
+}
+footer .f_nav ul li::after {
+    content: "";
+    /* 가상요소 before과 after을 사용할때는 반드시 contect 필요
+     지우면 나타나지 않음 */
+     width: 0.5px;
+     height: 12px;
+    background-color: #ccc;
+    display: block;
+    position: absolute;
+    right: -24px ;
+    top: 4px;
+}
+/* li중에서 마지막 li의 after 
+하나도 안띄고 */
+footer .f_nav ul li:last-child:after {
+    display: none;
 }
 footer .f_nav ul li:first-child {
     font-weight: 600;
