@@ -99,7 +99,7 @@ header .gnb ul li a:hover {
 }
 .visual h2 {
     text-align: left; /* 이미지도 가운데 정렬 가능 (ceter) */
-    padding: 240px 0 0 0;
+    padding: 103px 0 0 0;
 }
 .visual .camera {
     position: absolute;
@@ -125,7 +125,7 @@ header .gnb ul li a:hover {
 }
 
 .culture .tit {
-    margin: 103px 0 42px 0;
+    margin: 103px 0 20px 0;
 }
 .culture .tit h2 {
     color: #1d1d1d;
@@ -223,6 +223,9 @@ header .gnb ul li a:hover {
     font-weight: 800;
     font-size: 32px;
     margin: 0 0 5px 0;
+}
+.tour .tit p {
+    margin: 0 0 20px 0;
 }
 .tour .list ul {
     display: flex;
@@ -387,8 +390,75 @@ header .gnb ul li a:hover {
     color: #fff;
     font-size: 22px;
     font-weight: 800;
-
+    background-position: right 31px bottom 15px ;
+    background-repeat: no-repeat;
+}
+.community .link ul li.link1 a {
+    background-image: url(../images/cm1.svg);
+}
+.community .link ul li.link2 a {
+    background-image: url(../images/cm2.svg);
+}
+.community .link ul li.link3 a {
+    background-image: url(../images/cm3.svg);
+}
+.community .link ul li.link4 a {
+    background-image: url(../images/cm4.svg);
+}
+.community .link ul li.link1 a:hover {
+    background-image: url(../images/cm1_Y.svg);
+}
+.community .link ul li.link2 a:hover {
+    background-image: url(../images/cm2_Y.svg);
+}
+.community .link ul li.link3 a:hover {
+    background-image: url(../images/cm3_Y.svg);
+}
+.community .link ul li.link4 a:hover {
+    background-image: url(../images/cm4_Y.svg);
+}
+.community .link ul li a:hover {
+    color: #FACF67;
 }
 footer {
-    margin-top: 500px;
+    padding: 99px 0 137px 0;
+    background-color: #1d1d1d;
+}
+footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+footer .f_nav ul {
+    display: flex;
+    gap: 46px;
+}
+footer .f_nav ul li {
+    color: rgba(255,255,255, 0.8);
+}
+footer .f_nav ul li:first-child {
+    font-weight: 600;
+    color: rgba(255,255,255);
+}
+footer .f_info {
+    margin: 40px 0 0 0 ;
+    display: flex;
+    gap: 120px;
+    color: rgba(255,255,255, 0.8);
+} 
+footer .copyright {
+    margin: 50px 0 0 0;
+    color: rgba(255,255,255, 0.5);
+}
+footer .familysite button{
+    color: #fff;
+    width: 129px;
+    height: 35px;
+    border: 1px solid rgba(255,255,255, 0.6) ;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 0 15px;
+    text-align: left; /* 버튼의 기본은 가운데 - 왼쪽 정렬로 변경 */
+    background: url(../images/more_w.svg) no-repeat right 15px center;
+    cursor: pointer; /* 버튼에 오버시 마우스 포인터를 손바닥 모양으로 바꿔줌 */
+    /* 클릭하는 요소가 자동으로 손바닥 모양으로 바뀌어야함 클릭이 되지 않는걸 손바닥 모양으로 바꿔줌 */
 }
