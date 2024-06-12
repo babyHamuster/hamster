@@ -272,15 +272,12 @@
                 padding: 34px 21px 37px 21px;
                 display: block; /* padding을 적용하기 위한 값 */
             }
-            .news ul li a strong {
-                color: #0099ff;
-            }
             .news ul li a h3 {
                 font-size: 21px;
                 font-weight: 700;
                 color: #1d1d1d ;
                 line-height: 1.1;
-                margin: 16px 0 16px 0;
+                margin: 16px 0 16px 0; 
             
                 /* 1줄로 제한하기 - 주의사항 padding 절대 금지 */
                 white-space: nowrap; /* 줄바꿈 금지 */
