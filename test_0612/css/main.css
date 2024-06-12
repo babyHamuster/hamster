@@ -274,27 +274,10 @@
             }
             .news ul li a h3 {
                 font-size: 21px;
-                font-weight: 700;
-                color: #1d1d1d ;
-                line-height: 1.1;
-                margin: 16px 0 16px 0; 
-            
-                /* 1줄로 제한하기 - 주의사항 padding 절대 금지 */
-                white-space: nowrap; /* 줄바꿈 금지 */
-                overflow: hidden; /* 영역에서 넘치는 부분 숨기기 - 이 요소가 block요소여야함 */
-                text-overflow: ellipsis; 
-                /* 글자 마지막에 ... 추가 (글자가 잘리는 현상 막기) - 주의사항 ... 변경 불가 */
-            }
-            .news ul li a p {
-                /* 3줄로 제한 - 주의사항 padding 절대 금지 */
-                line-height: 1.4;
-                height: 4.2em ; /* 행간*줄수 = 단위는 em */
-                overflow: hidden; /* 영역에서 넘치는 부분 숨기기 - 이 요소가 block요소여야함 */
-            }
+                margin: 16px 0 47px 0;             
+           }
             .news ul li a span {
-                color: #6D6D6D;
-                margin: 22px 0 0 0;
-                display: block; /* margin 적용을 위한 값 */
+                margin: 9px 0 0 0;
             }
 } /* media */
 
