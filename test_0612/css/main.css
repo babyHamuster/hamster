@@ -184,6 +184,9 @@
                 color: #1d1d1d;
                 margin: 5px 0 19px 0;
             }
+            .story .txt p br {
+                display: none;
+            }
             .story .txt .more {
                 margin: 15px 0 0 0;
             }
@@ -203,4 +206,112 @@
             .story .photo img {
                 width: 100%; /* photo의 넓이의 100% */
             }
+}
+.news h2 {
+    font-size: 50px ;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #1d1d1d;
+    margin: 151px 0 42px 0;
+}
+.news ul {
+    display: flex;
+    justify-content: space-between;
+}
+.news ul li {
+    width: 297px;
+    border: 1px solid #D9D9D9;
+}
+.news ul li a {
+    padding: 34px 21px 37px 21px;
+    display: block; /* padding을 적용하기 위한 값 */
+}
+.news ul li a strong {
+    color: #0099ff;
+}
+.news ul li a h3 {
+    font-size: 21px;
+    font-weight: 700;
+    color: #1d1d1d ;
+    line-height: 1.1;
+    margin: 16px 0 16px 0;
+
+    /* 1줄로 제한하기 - 주의사항 padding 절대 금지 */
+    white-space: nowrap; /* 줄바꿈 금지 */
+    overflow: hidden; /* 영역에서 넘치는 부분 숨기기 - 이 요소가 block요소여야함 */
+    text-overflow: ellipsis; 
+    /* 글자 마지막에 ... 추가 (글자가 잘리는 현상 막기) - 주의사항 ... 변경 불가 */
+}
+.news ul li a p {
+    /* 3줄로 제한 - 주의사항 padding 절대 금지 */
+    line-height: 1.4;
+    height: 4.2em ; /* 행간*줄수 = 단위는 em */
+    overflow: hidden; /* 영역에서 넘치는 부분 숨기기 - 이 요소가 block요소여야함 */
+}
+.news ul li a span {
+    color: #6D6D6D;
+    margin: 22px 0 0 0;
+    display: block; /* margin 적용을 위한 값 */
+}
+@media screen and (max-width:640px) {
+            .news h2 {
+                font-size: 30px ;
+                margin: 104px 0 50px 0;
+            }
+            .news ul {
+                /* display: flex;
+                justify-content: space-between; 
+                    2개씩 나오게 할거라 유지 */
+                flex-wrap: wrap; /* 줄바꿈 허용 */
+                gap: 16px;
+            }
+            .news ul li {
+                width: calc(50% - 8px);
+            }
+            .news ul li a {
+                padding: 34px 21px 37px 21px;
+                display: block; /* padding을 적용하기 위한 값 */
+            }
+            .news ul li a strong {
+                color: #0099ff;
+            }
+            .news ul li a h3 {
+                font-size: 21px;
+                font-weight: 700;
+                color: #1d1d1d ;
+                line-height: 1.1;
+                margin: 16px 0 16px 0;
+            
+                /* 1줄로 제한하기 - 주의사항 padding 절대 금지 */
+                white-space: nowrap; /* 줄바꿈 금지 */
+                overflow: hidden; /* 영역에서 넘치는 부분 숨기기 - 이 요소가 block요소여야함 */
+                text-overflow: ellipsis; 
+                /* 글자 마지막에 ... 추가 (글자가 잘리는 현상 막기) - 주의사항 ... 변경 불가 */
+            }
+            .news ul li a p {
+                /* 3줄로 제한 - 주의사항 padding 절대 금지 */
+                line-height: 1.4;
+                height: 4.2em ; /* 행간*줄수 = 단위는 em */
+                overflow: hidden; /* 영역에서 넘치는 부분 숨기기 - 이 요소가 block요소여야함 */
+            }
+            .news ul li a span {
+                color: #6D6D6D;
+                margin: 22px 0 0 0;
+                display: block; /* margin 적용을 위한 값 */
+            }
+} /* media */
+
+@media screen and (max-width:500px) {
+            .news ul {
+                 flex-wrap: nowrap; /* 줄바꿈 금지 */
+                 flex-direction: column; /* 세로로 배치 */
+                 
+            }
+            .news ul li {
+                width: auto; /* 넓이 제한 풀기 - block요소니까 넓이 100% */
+            }
+} /* media */
+
+.container {
+    margin: 0 0 150px 0;
 }
