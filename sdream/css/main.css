@@ -58,6 +58,9 @@ header .gnb .gnb_wrap ul li a {
     font-size: 22px;
     position: relative; /* after 정렬의 기준 */
 }
+header .gnb .gnb_wrap ul li a:hover {
+    color: #4FE6AF;
+}
 header .gnb .gnb_wrap ul li a::after {
     position: absolute; /* a를 기준으로 배치 */
     right: 0;
@@ -110,41 +113,72 @@ header .gnb .gnb_wrap ul li:last-child a::after {
     color: #fff;
     height: 800px;
 }
-.visual strong {
-    display: block; /* padding여백을 주기 위한값 */
-    padding: 575px 0 9px 0;
-    font-size: 20px;
+.visual .wrapper {
+    text-align: center;
 }
 .visual h2 {
-    font-size: 45px;
+ /* padding여백을 주기 위한값 */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 267px 0 9px 0;
+    font-size: 60px;
+}
+.visual h2 .big {
+    font-size: 100px;
+    color: #4FE6AF;
+}
+.visual strong {
+    font-size: 22px;
+}
+.visual span {
+    font-size: 22px;
 }
 @media screen and (max-width:640px){
                 .visual {
                     height: auto; /* 높이는 콘텐츠의 길에 맞춰 알아서 */
                     padding: 152px 0 46px 0;
                 }
-                .visual strong {
-                    display: none; /* 숨김 */
-                }
                 .visual h2 {
                     font-size: 15px;
                 }
-                .visual h2 em {
+                .visual strong {
+                    display: none; /* 숨김 */
+                }
+                .visual span {
                     font-size: 20px;
                 }
 }/* media */
+.biz {
+    margin: 118px 0 0 0;
+}
 
 .biz .wrapper {
     display: flex;
     justify-content: space-between;
+/* flex로 정렬하면 좌우요소의 길이가 같아짐.
+    하지만 구현을 위해서 존재하는 만큼만 길이가 들어가야함.
+    aline-item 을 주면 flex를 정렬한 요소들의
+    길이가 같아지는 현상이 사라짐. */
     align-items: flex-start;
 }
 .biz .subject {
     position: sticky;
-    top: 20px;
+    top: 70px;
+    margin: 88px 0 0 0;
+    /* 나를 감싸는 요소의 길이 내부에서 스크롤되는 동안
+    상단에 고정으로 존재하는 것. 감싸는 요소가 모두 스크롤
+    되면 따라서 스크롤 됨 
+    대부분 left를 잘 안 주고 top만 줌 
+    고정될때 상단의 여백이 됨... 
+    단점 : 감싸는 요소중에서 절대 속성으로
+    overflow:hidden;을 주면 안됨...
+    -- wrap한테 무조건 overflow:hidden; 줘야함.
+    -- 그래서 플러그인으로 대체해서 잘 사용함.
+    */
 }
 .biz .subject strong {
-    color: #1456AC;
+    color: #009EF9;
 }
 .biz .subject h2 {
     color: #1d1d1d;
@@ -152,12 +186,211 @@ header .gnb .gnb_wrap ul li:last-child a::after {
     margin: 8px 0;
 }
 .biz .list {
-    width: 500px;
-    height: 1500px;
-    background-color: #1456AC;
+    width: 832px ;
+}
+.biz .list ul {
+    display: flex;
+    flex-wrap: wrap; /* 두줄허용 */
+    gap: 24px;
+}
+.biz .list ul li {
+    width: 404px;
+    color: #fff;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.biz .list ul li a {
+    height: 390px;
+    display: block;
+    /* height를 적용하기 위한 값 */
+    position: relative; /* h3 정렬의 기준 */
+    text-align: center;
+
+}
+.biz .list ul li a:hover .photo::before {
+    display: none;
+    position: absolute; /* a를 기준으로 정렬 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 69, 141, 0.7);
+    content: "";
+}
+.biz .list ul li a:hover .photo::before { /* a에 오버했을때 */
+    display: block;
+}
+.biz .list ul li a h3 {
+    position: relative; /* absolute 해제 */
+    left: auto;
+    bottom: auto;
+    font-size: 25px;
+    margin: 5px 0 23px 0;
+    font-weight: 400 ;
+}
+.biz .list ul li a:hover h3 {
+    bottom: 226px;
+}
+.biz .list ul li a p { 
+    /* 마우스 오버만 보임 
+        - 미리 오버 스타일을 모두 가지고 있고, display로 
+        보이는 상태만 변하는 것이 좋음 */
+    /* display: none; */
+    position: absolute; /* a를 기준으로 */
+    left: 0;
+    bottom: 178px;
+    margin: 0 35px;
+    color: #fff;
+}
+.biz .list ul li a:hover p { /* 오버한 경우 */
+    display: block;
+}
+.biz .list ul li a .more {
+    /*display: none;*/ /* 마우스 오버만 보임 */
+    position: absolute; /* a를 기준으로 */
+    left: 50%;
+    transform: translate(-50%,0);
+    /* 가운데 정렬 */
+    bottom: 111px ;
+    color: #fff;
+    padding-right: 20px; /* 오른쪽에 아이콘 들어갈 여백 */
+}
+.biz .list ul li a:hover .more {
+    display: block;
+}
+.biz .list ul li a .more::after {
+    position: absolute;
+    right: -6px ;
+    top: -3px ;
+    width: 24px;
+    height: 24px ;
+    background: url(../images/biz_more.svg) no-repeat center center / contain ;
+    content: "";
 }
 
+.biz .list ul li:nth-child(odd) { /* 홀수 */
+    transform: translate(0,90px);
+    /* transform은 현재의 위치에서부터 요소를 움직이는데
+    살짝 absolute처럼 다른요소의 부딪치더라도 배치할 수 있음
+    margin은 다른요소와 중복되면 밀리는 현상이 발생하느넫
+    transform: translate로 움직이는 것은 공간을 차지하지 않음 
+    기본적으로 모든 여백은 magin이고 magin으로 안되는 경우
+    transform: translate 를 사용*/
 
+}
+
+@media screen and (max-width:640px) {
+            .biz {
+                margin: 41px 0 0 0;
+            }
+            
+            .biz .wrapper {
+                display: block;
+            }
+            .biz .subject {
+                position:relative;
+                /* stiky를 햐제하기 위해서 position중에서 
+                줘도 변화가 없는 값으로 대체 */
+                top: auto; /* relative도 top이 적용됨, 해제 auto*/
+                margin: auto;
+            }
+            .biz .subject h2 {
+                font-size: 25px;
+                margin: 0;
+            }
+            .biz .subject h2 br {
+                display: none;
+            }
+            .biz .subject p {
+                display: none;
+            }
+            .biz .list {
+                width: auto ; /* 넓이 고정값 해제 */
+            }
+            .biz .list ul {
+                gap: 0;
+            }
+            .biz .list ul li {
+                /* width: calc(50% - 8px ); */
+                width: 50%;
+                color: #3d3d3d;
+                /* visible : overflow 해제 - 길이만큼 늘어나게 모바일에서 
+                사이즈가 줄어들면 제목이 2줄이 될 수도 있음*/
+                border-radius: 0;
+            }
+            .biz .list ul li .photo {
+                height: 82px;
+                overflow: hidden;
+            }
+            .biz .list ul li .photo img {
+                /* pc와 mobile에서 이미지의 비율이 다르게 보일때 
+                img 태그로 코딩한 이미지를 정해진 영역에 맞게
+                사이즈를 리사이즈 해주는 코딩*/
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .biz .list ul li a {
+                height: auto; /* 제목이 여러줄이 될 수도 있음 */
+            }
+            .biz .list ul li a:hover .photo::before {
+                display: none;
+                /* 모바일 마우스 오버가 없음 
+                단 , 꾹 누르고 있으면 오버가 구현됨
+                오버 스타일을 삭제하거나 제대로 구현되도록 이용 */
+            }
+            .biz .list ul li a h3 {
+                position: relative; /* absolute 해제 */
+                left: auto;
+                bottom: auto;
+                font-size: 15px;
+                margin: 5px 0 23px 0;
+                font-weight: 400 ;
+            }
+            .biz .list ul li a:hover h3 {
+                bottom: auto;
+            }
+            .biz .list ul li a p { 
+                /* 마우스 오버만 보임 
+                    - 미리 오버 스타일을 모두 가지고 있고, display로 
+                    보이는 상태만 변하는 것이 좋음 */
+                /* display: none; */
+                position: absolute; /* a를 기준으로 */
+                left: 0;
+                bottom: 178px;
+                margin: 0 35px;
+                color: #fff;
+            }
+            .biz .list ul li a:hover p { /* 오버한 경우 */
+                display: block;
+            }
+            .biz .list ul li a .more {
+                display: none;
+            }
+            .biz .list ul li a:hover .more {
+                display: none;
+            }
+            .biz .list ul li a .more::after {
+                position: absolute;
+                right: -6px ;
+                top: -3px ;
+                width: 24px;
+                height: 24px ;
+                background: url(../images/biz_more.svg) no-repeat center center / contain ;
+                content: "";
+            }
+            
+            .biz .list ul li:nth-child(odd) { /* 홀수 */
+                transform: translate(0);
+                /* transform은 현재의 위치에서부터 요소를 움직이는데
+                살짝 absolute처럼 다른요소의 부딪치더라도 배치할 수 있음
+                margin은 다른요소와 중복되면 밀리는 현상이 발생하느넫
+                transform: translate로 움직이는 것은 공간을 차지하지 않음 
+                기본적으로 모든 여백은 magin이고 magin으로 안되는 경우
+                transform: translate 를 사용*/
+            
+            }
+} /* media */
 footer {
     margin-top: 2000px;
 }
