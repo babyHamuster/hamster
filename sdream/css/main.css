@@ -120,8 +120,8 @@ header .gnb .gnb_wrap ul li:last-child a::after {
  /* padding여백을 주기 위한값 */
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    padding: 267px 0 9px 0;
+    align-items: baseline;
+    padding: 267px 0 0 0;
     font-size: 60px;
 }
 .visual h2 .big {
@@ -129,7 +129,10 @@ header .gnb .gnb_wrap ul li:last-child a::after {
     color: #4FE6AF;
 }
 .visual strong {
+    display: flex;
+    justify-content: space-around;
     font-size: 22px;
+    margin: 0 0 5px 0;
 }
 .visual span {
     font-size: 22px;
@@ -163,7 +166,7 @@ header .gnb .gnb_wrap ul li:last-child a::after {
 }
 .biz .subject {
     position: sticky;
-    top: 20px;
+    top: 80px;
     /* 나를 감싸는 요소의 길이 내부에서 스크롤되는 동안 
       상단에 고정으로 존재하는 것. 
       감싸는 요소가 모두 스크롤되면 따라서 스크롤됨 
