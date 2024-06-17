@@ -229,7 +229,7 @@ header .gnb .gnb_wrap ul li:last-child a::after {
     font-weight: 400 ;
 }
 .biz .list ul li a:hover h3 {
-    bottom: 226px;
+    bottom: -226px;
 }
 .biz .list ul li a p { 
     /* 마우스 오버만 보임 
