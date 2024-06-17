@@ -123,10 +123,12 @@ header .gnb .gnb_wrap ul li:last-child a::after {
     align-items: baseline;
     padding: 267px 0 0 0;
     font-size: 60px;
+    font-weight: 700;
 }
 .visual h2 .big {
     font-size: 100px;
     color: #4FE6AF;
+    font-weight: 800;
 }
 .visual strong {
     display: flex;
@@ -134,16 +136,16 @@ header .gnb .gnb_wrap ul li:last-child a::after {
     font-size: 22px;
     margin: 0 0 5px 0;
 }
-.visual span {
-    font-size: 22px;
-}
 @media screen and (max-width:640px){
                 .visual {
                     height: auto; /* 높이는 콘텐츠의 길에 맞춰 알아서 */
                     padding: 152px 0 46px 0;
                 }
                 .visual h2 {
-                    font-size: 15px;
+                    font-size: 30px;
+                }
+                .visual h2 .big {
+                    font-size: 50px;
                 }
                 .visual strong {
                     display: none; /* 숨김 */
@@ -514,20 +516,24 @@ header .gnb .gnb_wrap ul li:last-child a::after {
                     position: relative;
                 }
                 .news .more {
-                    position: absolute;
-                    top: 0;
-                    right: 0;
+                    position: relative;
+                    top: auto;
+                    right: auto;
+                    margin: 20px 0 0 0;
+                    text-align: center;
+                    font-size: 13px;
                 }
                 .news .more a {
-                    display: block;
-                    padding: 3px 34px 2px 12px ;
+                    display: inline-block;
+                    padding: 6px 53px 6px 14px ;
                     border-radius: 20px;
                     border: 1px solid #666;
                     position: relative;
                     color: #666;
                 }
                 .news .more a::after {
-                    top: 1px ;
+                    top: 4px ;
+                    right: 14px;
                 }
 }
 footer {
