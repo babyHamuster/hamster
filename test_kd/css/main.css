@@ -35,11 +35,14 @@ h1 {
 }
 .business .wrapper ul li {
     width: 297px;
-    font-weight: 700;
-    font-size: 25px;
-    margin: 13px 0 7px 0;
-    color: #1d1d1d;
 }
+.business .wrapper ul li h2 {
+font-weight: 700;
+font-size: 25px;
+padding: 13px 0 7px 0;
+color: #1d1d1d;
+}
+
 .business .wrapper ul p {
     font-weight: 400;
     font-size: 15px;
