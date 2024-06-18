@@ -789,6 +789,7 @@ font-weight: 700;
     display:block;
     height: 181px;
     background-color: rgba(0, 116, 239, 0.8);
+    border-radius: 20px;
     color: #fff;
 }
 .introduce .list ul li.intro1 a {
