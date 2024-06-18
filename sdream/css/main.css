@@ -747,9 +747,165 @@ header .gnb .gnb_wrap ul li:last-child a::after {
                     background: url(../images/news_more_y.svg) no-repeat center center / contain;
                     content: ""; /* after를 보이게 하는값 */
                 }
+}/* media */
+
+.introduce {
+    background-color: rgba(20, 86, 172, 0.05);
+    padding: 67px 0 76px 0 ;
+    margin: 92px 0 0 0;
+}
+.introduce .subject h2 {
+    color: #1d1d1d;
+    font-size: 45px;
+    margin: 8px 0 33px 0;
+    font-weight: 800;
+}
+.introduce .subject strong {
+    color: #0074EF;
+    margin: 0 0 0 0;
+    display: block; /* margin을 적용하기 위해서 */
+    font-weight: 800;
+}
+.introduce .list ul {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+.introduce .list ul li {
+    width: 618px;
+}
+.introduce .list ul li a {
+    display:block;
+    height: 181px;
+    border-radius: 20px;
+}
+.introduce .list h3 {
+padding: 75px 0 0 74px ;
+color: #fff;
+font-size: 25px;
+font-weight: 700;
+}
+.introduce .list ul li a:hover h3 {
+    display:block;
+    height: 181px;
+    background-color: rgba(0, 116, 239, 0.8);
+    color: #fff;
+}
+.introduce .list ul li.intro1 a {
+    background: url(../images/sub1.png) no-repeat center center / cover ;
+}
+.introduce .list ul li.intro2 a {
+    background: url(../images/sub2.png) no-repeat center center / cover ;
+}
+.introduce .list a {
+    position: relative; /* after의 정렬 기준 */
+}
+.introduce .list a::after {
+    position: absolute; /* a를 기준으로 정렬 */
+    right: 171px;
+    bottom: 65px;
+    width: 45px;
+    height: 45px;
+    content: ""; /* after을 존재하게 하는 값 */
+    background: url(../images/link.svg) no-repeat center center / contain ;
+}
+@media screen and (max-width:640px) {
+
+    .introduce {
+        background-color: transparent;
+        padding: 50px 0 0 0 ;
+        margin: 0 0 0 0;
+    }
+    .introduce .subject h2 {
+        display: none;
+    }
+    .introduce .subject strong {
+        display: none;
+    }
+    .introduce .list ul {
+        display: flex;
+        justify-content: none ;
+        gap: 0;
+    }
+    .introduce .list ul li {
+        width: 618px;
+    }
+    .introduce .list ul li a {
+        display:block;
+        height: 181px;
+    }
+    .introduce .list h3 {
+    padding: 73px 0 0 0 ;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    }
+    .introduce .list a::after {
+        display: none;
+    }
 }
 
-
 footer {
-    margin-top: 2000px;
+    padding: 50px 0 70px 0;
+    background-color: #313131;
+    color: #fff;
+}
+footer .wrapper {
+    position: relative; /* 정렬기준 */
+}
+footer .top {
+    position: absolute; 
+    right: 0;
+    top: 0;
+}
+footer .top button {
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgba(255,255,255,0.8);
+    border-radius: 50% ; /* 동그라미 */
+    padding: 20px 0 0 0;
+    position: relative; /* 정렬의 기준 */
+    cursor: pointer;
+}
+footer .top button::before {
+    position: absolute;
+    left: 12px;
+    top: 4px;
+    width: 24px;
+    height: 24px;
+    background: url(../images/top.svg) no-repeat center center / cover ;
+    content: "";
+}
+footer .f_nav ul {
+    display: flex;
+    gap: 40px;
+}
+footer .f_nav ul li {
+    position: relative; /* after 정렬 기준*/
+}
+footer .f_nav ul li::after {
+    position: absolute;
+    right: -22px;
+    top: 3px;
+    width: 1px;
+    height: 12px;
+    background-color: rgba(255,255,255,0.6);
+    content: "";
+}
+footer .f_nav ul li:last-child:after {
+    display: none;
+}
+footer .f_info {
+    margin: 20px 0 0 0 ;
+    display: flex;
+    gap: 60px;
+    color: rgba(255,255,255, 0.8);
+} 
+footer .copyright {
+    margin: 20px 0 0 0;
+    color: rgba(255,255,255, 0.5);
+}
+@media screen and (max-width:640px) {
+                            
 }
