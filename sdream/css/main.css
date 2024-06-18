@@ -833,6 +833,7 @@ font-weight: 700;
     .introduce .list ul li a {
         display:block;
         height: 181px;
+        border-radius: 0;
     }
     .introduce .list h3 {
     padding: 73px 0 0 0 ;
@@ -866,7 +867,6 @@ footer .top button {
     border-radius: 50% ; /* 동그라미 */
     padding: 20px 0 0 0;
     position: relative; /* 정렬의 기준 */
-    cursor: pointer;
 }
 footer .top button::before {
     position: absolute;
@@ -907,5 +907,49 @@ footer .copyright {
     color: rgba(255,255,255, 0.5);
 }
 @media screen and (max-width:640px) {
-                            
-}
+                footer {
+                    padding: 15px 0 77px 0;
+                }
+                footer .top {
+                    position: absolute; 
+                    text-align: right;
+                }
+                footer .top button {
+                    width: 40px;
+                    height: 40px;
+                    padding: 13px 0 0 0;
+                }
+                footer .top button::before {
+                    left: 10px;
+                    top: 3px;
+                    width: 19px;
+                    height: 19px;
+                }
+                footer .f_nav ul {
+                    display: flex;
+                    flex-wrap: wrap; /* 여러줄 허용*/
+                    gap: 0;
+                }
+                footer .f_nav ul li {
+                    margin: 0 30px 5px 0 ;
+                }
+                footer .f_nav ul li::after {
+                    position: absolute;
+                    right: -22px;
+                    top: 3px;
+                }
+                footer .f_nav ul li:last-child:after {
+                    display: none;
+                }
+                footer .f_info {
+                    margin: 26px 0 0 0 ;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 30px;
+                    color: rgba(255,255,255, 0.8);
+                } 
+                footer .copyright {
+                    margin: 20px 0 0 0;
+                    color: rgba(255,255,255, 0.5);
+                }                 
+} /* media */
