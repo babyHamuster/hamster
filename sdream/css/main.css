@@ -537,51 +537,100 @@ header .gnb .gnb_wrap ul li:last-child a::after {
                 }
 } /*media*/
 
+
 .webzine .subject strong {
-    display: block; /* margin을 적용하기 위해서 */
-    color: #0074EF;
-    font-size: 15px;
-    font-weight: 800;
+    color: #;
     margin: 105px 0 0 0;
+    display: block; /* margin을 적용하기 위해서 */
+    font-weight: 700;
 }
+
 .webzine .subject h2 {
     color: #1d1d1d;
-    font-size: 50px;
-    font-weight: 700;
-    margin: 0 0 15px 0;
+    font-size: 45px;
+    margin: 8px 0 33px 0;
 }
 .webzine .list ul {
     display: flex;
+    justify-content: space-between;
 }
 .webzine .list ul li {
     width: 404px;
-    height: 291px;
 }
+
 .webzine .list ul li a {
-    height: 417px;
+    height: 371px;
     border-radius: 20px;
-    border: 1px solid #fff;
-    display: block; /* height 적용하기 위한 값*/
-    overflow: hidden;
-    justify-content:space-between ;
+    border: 1px solid #ccc;
+    display: block; /* height를 적용하기 위한 값 */
+    overflow: hidden; ;
 }
+
 /* 게시판에서 이미지를 가져오는 경우는
-이미지의 사이즈가 다양하다
-이를 디자인 한 대로 동일한 사이즈 대로 리사이즈 하는 방법 
-1. 이미지를 감싸는 요소가 넓이와 높이를 가지고 있어야 함 
-overflow:hidden 
-2. 이미지에는 높이,넓이 100%, object-fit:cover을 줘야함 */
+이미지의 사이즈가 다양함. 
+이를 디자인한대로 동일한 사이즈로 리사이즈하는 방법 
+1. 이미지를 감싸는 요소가 넓이와 높이를 가지고 있어야함.
+    overflow:hidden;
+2. 이미지에는 width:100%, height:100%, object-fit:cover를 줘야함 */
 .webzine .list ul li a .photo {
     overflow: hidden;
-    height: 291px; /* block 요소이기 때문에 넓이는 안줘도 됨 */
+    height: 232px; /* block요소이기때문에 넓이는 안줘도 됨 */
 }
 .webzine .list ul li a .photo img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; 
     /* 감싸는 요소에 꽉맞게 리사이즈 - 위아래/좌우에 가운데 이미지 정렬 */
+    transition: 0.5s;
+    /* img를 부드럽게 처리
+    마우스 오버 / 클래스 추가 / 브라우저 사이즈가 바뀌어 반응형 코드 적용 */
 }
-
+.webzine .list ul li a strong {
+    margin: 28px 0 8px 24px ;
+    color: #0074EF;
+    font-weight: 700;
+    display: block;
+}
+.webzine .list ul li a h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1d1d1d;
+    margin: 0 23px 0 23px ;
+}
+/* a에 마우스를 올렸을때 */
+.webzine .list ul li a:hover .photo img {
+    transform: scale3d(1.2,1.2,1); /* 이미지를 확대 */
+}
+.webzine .list ul li a:hover {
+    background-color: #0074EF;
+    border-color: #1456AC;
+    color: #fff;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
+}
+.webzine .list ul li a:hover strong {
+    color: #fff;
+}
+.webzine .list ul li a:hover h3 {
+    color: #fff;
+}
+.webzine .more {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.webzine .more a {
+    display: block;
+    padding: 3px 34px 2px 12px ;
+    border-radius: 20px;
+    border: 1px solid #666;
+    position: relative;
+    color: #666;
+}
+.webzine .more a:hover {
+    color: #fff;
+    border-color: #0074EF;
+    background-color: #0074EF;
+}
 footer {
     margin-top: 2000px;
 }
