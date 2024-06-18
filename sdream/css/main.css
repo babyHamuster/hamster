@@ -824,7 +824,6 @@ font-weight: 700;
     }
     .introduce .list ul {
         display: flex;
-        justify-content: none ;
         gap: 0;
     }
     .introduce .list ul li {
