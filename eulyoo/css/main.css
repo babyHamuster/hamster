@@ -322,11 +322,78 @@
 }
 .interview .more {
     position: absolute;
-    top: 96px ;
+    top: 110px ;
     left: 0;
     width: 100%;
     text-align: center;
 }
+.interview .more a {
+    color: #3d3d3d;
+    padding: 6px 45px 6px 10px ;
+    border: 0.5px solid #3D3D3D ;
+    display: inline-block;
+    border-radius: 30px;
+    position: relative; /* after의 정렬 기준*/
+}
+.interview .more a::after {
+    position: absolute;
+    right:  12.51px;
+    top: 12.35px;
+    width: 23.24px;
+    height: 5.28px;
+    background-image: url("data:image/svg+xml,%3Csvg width='26' height='7' viewBox='0 0 26 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.8655 0.821289L23.6045 6.10109H0.361328' stroke='%233D3D3D'/%3E%3C/svg%3E%0A");
+    content: "";
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+.interview .more a:hover {
+    border-color: #A88E75;
+    color: #fff;
+    background-color: #A88E75;
+
+}
+.interview .more a:hover:after {
+    position: absolute;
+    right:  12.51px;
+    top: 12.35px;
+    width: 23.24px;
+    height: 5.28px;
+    background-image: url("data:image/svg+xml,%3Csvg width='26' height='7' viewBox='0 0 26 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.9749 0.939453L23.7139 6.21925H0.470703' stroke='white'/%3E%3C/svg%3E%0A");
+    content: "";
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+.interview .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.interview .list ul li {
+    width: 404px;
+
+} /* 무조건 두번째 요소에 적용됨 */
+.interview .list ul li:nth-last-child(2) {
+    margin-top: 50px;
+}
+.interview .list ul li a .photo {
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    border-radius: 40px 0 40px 0;
+}
+.interview .list ul li:nth-child(2) a .photo {
+    border-radius: 0 40px 0 40px;
+}
+.interview .list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 감싸는 요소 photo 영역에 이미지 꽉채우기 */
+}
+
 footer {
     margin: 500px 0 0 0 ;
 }
