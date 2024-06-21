@@ -301,7 +301,32 @@
                 
                 }
 }
+.interview {
+    background-color: rgba(244, 244, 244, 0.8) ;
+    margin: 109px 0 0 0;
+    padding: 76px 0 112px 0;
 
+}
+.interview .wrapper {
+    position: relative; /* more 정렬의 기준 */
+}
+.interview .tit {
+    text-align: center;
+    margin: 0 0 72px 0;
+}
+.interview .tit h2 {
+    font-size: 50px ;
+    font-family: 'Eulyoo1945 SemiBold';
+    line-height: 1.2;
+    margin: 0 0 11px 0;
+}
+.interview .more {
+    position: absolute;
+    top: 96px ;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
 footer {
     margin: 500px 0 0 0 ;
 }
