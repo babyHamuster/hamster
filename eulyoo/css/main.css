@@ -2,3 +2,77 @@
 @import url(fonts.css);
 @import url(common.css);
 
+.visual ul li {
+    background-position: center center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.visual ul li.pop_bg1 {
+    background-image: url(../images/Eulyoo1945bg1.png);
+}
+.visual ul li.pop_bg2 {
+    background-image: url(../images/Eulyoo1945bg2.png);
+}
+.visual ul li.pop_bg3 {
+    background-image: url(../images/Eulyoo1945bg3.png);
+}
+.visual ul li strong {
+    font-family: 'Eulyoo1945 SemiBold';
+    font-size:120px ;
+    color: rgba(255, 255, 255, 0.2);
+    margin: 290px 0 0 0;
+    display: block;
+}
+.visual ul li h2 {
+    font-family: 'Eulyoo1945 SemiBold';
+    font-size: 50px;
+    color: #fff;
+    margin: -74px 0 0 168px ;
+}
+.visual ul li h2 .mine {
+    margin: -50px 2px 0 220px;;
+}
+.visual ul li p {
+    margin: -1px 0 0 177px;
+}
+.visual .btn_prev,
+.visual .btn_next
+ { 
+    position: absolute; /* siwper을 기준으로 정렬 */
+    top: 413px;
+    z-index: 10; /* position 속성이 들어간 요소끼리의 순서 - 숫자가 높으면 위 */
+    height: 60px; /* 버튼의 크기 */
+    width: 60px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    content: "";
+}
+.visual .btn_prev::before,
+.visual .btn_next::before {
+    position: absolute; /* button을 기준으로 정렬 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+}
+.visual .btn_prev {
+    left: 140px;
+}
+.visual .btn_next  {
+    right: 140px;
+}
+.visual .btn_prev::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_7_20' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='60' height='60'%3E%3Crect width='60' height='60' transform='matrix(-1 0 0 1 60 0)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_7_20)'%3E%3Cpath d='M39.9858 53.2695L42.6445 50.6107L22.0339 30.0001L42.6445 9.38946L39.9858 6.73071L16.7164 30.0001L39.9858 53.2695Z' fill='%23F7F7F7' fill-opacity='0.8'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.visual .btn_next::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_32_457' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='60' height='60'%3E%3Crect width='60' height='60' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_32_457)'%3E%3Cpath d='M20.0142 53.2695L17.3555 50.6107L37.9661 30.0001L17.3555 9.38946L20.0142 6.73071L43.2836 30.0001L20.0142 53.2695Z' fill='%23F7F7F7' fill-opacity='0.8'/%3E%3C/g%3E%3C/svg%3E ");
+}
+@media screen and (max-width:640px) {
+                .visual .btn_prev,
+                .visual .btn_next {
+                    display: none;
+                }   
+}
