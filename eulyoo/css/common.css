@@ -15,6 +15,7 @@ html, body {
    가로스크롤바가 생겼을때 배경이 짤리는 현상을 막음 */
 #wrap {
     min-width: 1260px;
+    overflow: hidden;
 }
 /* 홈페이지의 넓이를 제한하고 가운데정렬 */
 .wrapper {

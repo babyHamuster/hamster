@@ -22,20 +22,17 @@
     font-family: 'Eulyoo1945 SemiBold';
     font-size:120px ;
     color: rgba(255, 255, 255, 0.2);
-    margin: 290px 0 0 0;
+    margin: 240px 0 0 228px;
     display: block;
 }
 .visual ul li h2 {
     font-family: 'Eulyoo1945 SemiBold';
     font-size: 50px;
     color: #fff;
-    margin: -74px 0 0 168px ;
-}
-.visual ul li h2 .mine {
-    margin: -50px 2px 0 220px;;
+    margin: -74px 0 0 396px ;
 }
 .visual ul li p {
-    margin: -1px 0 0 177px;
+    margin: -1px 0 0 405px;
 }
 .visual .btn_prev,
 .visual .btn_next
@@ -70,9 +67,246 @@
 .visual .btn_next::before {
     background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_32_457' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='60' height='60'%3E%3Crect width='60' height='60' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_32_457)'%3E%3Cpath d='M20.0142 53.2695L17.3555 50.6107L37.9661 30.0001L17.3555 9.38946L20.0142 6.73071L43.2836 30.0001L20.0142 53.2695Z' fill='%23F7F7F7' fill-opacity='0.8'/%3E%3C/g%3E%3C/svg%3E ");
 }
-@media screen and (max-width:640px) {
+@media screen and (max-width:1400px) {
                 .visual .btn_prev,
                 .visual .btn_next {
                     display: none;
                 }   
+}
+@media screen and (max-width:640px) {
+                .visual ul li {
+                    height: 560px;
+                }
+                .visual ul li.pop_bg1 {
+                    background-image: url(../images/s.png);
+                }
+                .visual ul li.pop_bg2 {
+                    background-image: url(../images/2.png);
+                }
+                .visual ul li.pop_bg3 {
+                    background-image: url(../images/smallbg3.png);
+                }
+                .visual ul li strong {
+                    display: none;
+                }
+                .visual ul li h2 {
+                    font-family: 'Eulyoo1945 SemiBold';
+                    font-size: 45px;
+                    color: #fff;
+                    margin: 187px 0 0 91px;
+                }
+                .visual ul li p {
+                    margin: 0 0 0 115px;;
+                }
+                .visual ul li a br {
+                    display: none;
+                }
+}
+
+.book {
+    margin: 119px 0 0 0;
+}
+.book .wrapper {
+    position: relative; /* 리스트 정렬의 기준 */
+}
+.book .tit {
+    float: left;
+}
+.book .tit h2 {
+    font-size: 50px ;
+    font-family: 'Eulyoo1945 SemiBold';
+    line-height: 1.2;
+    margin: 0 0 11px 0;
+}
+.book .list {
+    margin: 0 0 0 321px;
+    width: 1260px;
+}
+.book .list ul li {
+    width: 297px;
+}
+.book .list ul li a .photo {
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+}
+.book .list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 감싸는 요소 photo 영역에 이미지 꽉채우기 */
+    transition: 0.5s;
+}
+.book .list ul li a:hover .photo img {
+    transform: scale3d(1.1,1.1,1); /* 가운데를 기준으로 확대 */
+}
+.book .list ul li a h3 {
+    /* 1줄제한 - block요소 */
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 13px 0 0 0 ;
+
+    font-size: 25px ;
+    font-family: 'Eulyoo1945 SemiBold';
+}
+.book .list ul li a span {
+    margin: 0 0 12px 0;
+    display: block;
+    color: rgba(168, 142, 117, 0.8);
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.book .list ul li a p {
+    display: block;
+    line-height: 1.4;
+    height: 2.8em;
+    overflow: hidden;
+}
+.book .more {
+    position: absolute; /* wrapper을 기준으로 */
+    top: 196px;
+    left: 0;
+}
+.book .more a {
+    color: #3d3d3d;
+    padding: 6px 45px 6px 10px ;
+    border: 0.5px solid #3D3D3D ;
+    display: block;
+    border-radius: 30px;
+    position: relative; /* after의 정렬 기준*/
+}
+.book .more a::after {
+    position: absolute;
+    right:  12.51px;
+    top: 12.35px;
+    width: 23.24px;
+    height: 5.28px;
+    background-image: url("data:image/svg+xml,%3Csvg width='26' height='7' viewBox='0 0 26 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.8655 0.821289L23.6045 6.10109H0.361328' stroke='%233D3D3D'/%3E%3C/svg%3E%0A");
+    content: "";
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+.book .more a:hover {
+    border-color: #A88E75;
+    color: #fff;
+    background-color: #A88E75;
+
+}
+.book .more a:hover:after {
+    position: absolute;
+    right:  12.51px;
+    top: 12.35px;
+    width: 23.24px;
+    height: 5.28px;
+    background-image: url("data:image/svg+xml,%3Csvg width='26' height='7' viewBox='0 0 26 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.9749 0.939453L23.7139 6.21925H0.470703' stroke='white'/%3E%3C/svg%3E%0A");
+    content: "";
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+@media screen and (max-width:640px) {
+                .book {
+                    margin: 64px 0 0 0;
+                }
+                .book .wrapper {
+                    position: relative; /* 리스트 정렬의 기준 */
+                }
+                .book .tit {
+                    float: none; /* float 해제 */
+                }
+                .book .tit h2 {
+                    font-size: 30px ;
+                    font-family: 'Eulyoo1945 Regular';
+                    margin: 0 0 24px 0;
+                }
+                .book .tit h2 br {
+                    display: none;
+                }
+                .book .tit p {
+                    display: none;
+                }
+                .book .list {
+                    margin: 0;
+                    width: calc(100% + 20px);
+                    /* 오른쪽 wrapper 밖까지 list가 ㄴ나오게 하기 위해서
+                    list한테 100%에 오른쪽 여백 20px를 추가해줌 */
+                }
+                .book .list ul li {
+                    width: 180px; /* 넓이는 jquery가 줌 */
+                }
+                .book .list ul li a h3 {
+                    /* 1줄제한 -> 무제한 */
+                    white-space: wrap;
+                    overflow: visible;
+
+
+                    font-size: 16px ;
+                    font-family: 'Eulyoo1945 SemiBold';
+                    margin: 13px 0 0 0;
+                }
+
+                .book .list ul li a span {
+                    margin: 0 0 4px 0;
+                    display: block;
+                }
+                .book .list ul li a p {
+                    font-size: 14px;
+                }
+                .book .more {
+                    position: absolute; /* wrapper을 기준으로 */
+                    top: 196px;
+                    left: 0;
+                }
+                .book .more a {
+                    color: #3d3d3d;
+                    padding: 6px 45px 6px 10px ;
+                    border: 0.5px solid #3D3D3D ;
+                    display: block;
+                    border-radius: 30px;
+                    position: relative; /* after의 정렬 기준*/
+                }
+                .book .more a::after {
+                    position: absolute;
+                    right:  12.51px;
+                    top: 12.35px;
+                    width: 23.24px;
+                    height: 5.28px;
+                    background-image: url("data:image/svg+xml,%3Csvg width='26' height='7' viewBox='0 0 26 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.8655 0.821289L23.6045 6.10109H0.361328' stroke='%233D3D3D'/%3E%3C/svg%3E%0A");
+                    content: "";
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                
+                }
+                .book .more a:hover {
+                    border-color: #A88E75;
+                    color: #fff;
+                    background-color: #A88E75;
+                
+                }
+                .book .more a:hover:after {
+                    position: absolute;
+                    right:  12.51px;
+                    top: 12.35px;
+                    width: 23.24px;
+                    height: 5.28px;
+                    background-image: url("data:image/svg+xml,%3Csvg width='26' height='7' viewBox='0 0 26 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.9749 0.939453L23.7139 6.21925H0.470703' stroke='white'/%3E%3C/svg%3E%0A");
+                    content: "";
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                
+                }
+}
+
+footer {
+    margin: 500px 0 0 0 ;
 }
