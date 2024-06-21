@@ -261,15 +261,16 @@
                     font-size: 14px;
                 }
                 .book .more {
-                    position: absolute; /* wrapper을 기준으로 */
-                    top: 196px;
-                    left: 0;
+                    position: relative; /* wrapper을 기준으로 */
+                    top: auto;
+                    left: auto;
                 }
                 .book .more a {
+                    margin: 38px 0 0 240px ;
                     color: #3d3d3d;
                     padding: 6px 45px 6px 10px ;
                     border: 0.5px solid #3D3D3D ;
-                    display: block;
+                    display: inline-block;
                     border-radius: 30px;
                     position: relative; /* after의 정렬 기준*/
                 }
@@ -284,12 +285,6 @@
                     background-position: center center;
                     background-repeat: no-repeat;
                     background-size: contain;
-                
-                }
-                .book .more a:hover {
-                    border-color: #A88E75;
-                    color: #fff;
-                    background-color: #A88E75;
                 
                 }
                 .book .more a:hover:after {
