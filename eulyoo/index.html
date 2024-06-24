@@ -16,8 +16,30 @@
 </head>
 <body>
     <div id="wrap">
+        <!-- header 가 스크롤이 되면 jquery에서 fixed라는 클래스를 header한테 줌-->
         <header>
-            <div class="wrapper"></div>
+            <div class="wrapper">
+                <!-- 로고 이미지가 검은색과 흰색으로 교체됨 
+                     이미지 태그로 코딩 불가 background로 해서
+                     css 상황에 따라 교체하게 해야함 -->
+                <h1 class="logo"><a href="#n">을유문화사</a></h1>
+                <nav class="gnb">
+                    <button class="gnb_open">메뉴열기</button>
+                    <div class="gnb_wrap">
+                        <ul>
+                            <li><a href="#n">을유문화사</a></li>
+                            <li><a href="#n">콘텐츠</a></li>
+                            <li><a href="#n">을유소식</a></li>
+                            <li><a href="#n">독자참여</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <!--top navigation bar - 메뉴말고 상단에 있는 다른 요소들-->
+                <div class="tnb">
+                    <a href="#n" class="mypage">마이페이지</a>
+                    <a href="#n" class="search">검색</a>
+                </div>
+            </div>
         </header>
         <main class="container">
             <section class="visual">
@@ -140,7 +162,9 @@
                     </div>
                     <div class="list">
                         <ul>
-                            <li>
+                            <!-- 마우스를 오버하면 jquery에서
+                                 오버한 li에만 on 클래스 추가-->
+                            <li class="on">
                                 <a href="#n">
                                     <div class="photo"><img src="images/interview1.png" alt="인터뷰 사진"></div>
                                     <div class="txt">
@@ -164,7 +188,7 @@
                                 <a href="#n">
                                     <div class="photo"><img src="images/interview3.png" alt="인터뷰 사진"></div>
                                     <div class="txt">
-                                        <h3>화가<br>홍지희</h3>
+                                        <h3>화가 <br>홍지희</h3>
                                         <p>가이 대븐포트의『스틸라이프』를 추천하고 싶습니다. “세상에 가장 아름다운 질서는 그 자체로는 사소한 것들을 무작위로 모아 놓은 것이다.”라는 문장이 이번 작업에서 저에게 모티브가 되었던 것 같아요.</p>
                                         <span>자세히보기</span>
                                     </div>

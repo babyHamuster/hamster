@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'Eulyoo1945';
-    font-weight: 500;
-    font-display: swap;
-    src: local('Eulyoo1945 Regular'), url(../fonts/Eulyoo1945-Regular.woff2) format('woff2'), url(../fonts/Eulyoo1945-Regular.woff) format('woff');
+    src: url(../fonts/Eulyoo1945-Regular.woff2) format('woff2'), url(../fonts/Eulyoo1945-Regular.woff) format('woff');
+    font-weight: 400;
+    font-style: normal;
 }
 @font-face {
-    font-family: 'Eulyoo1945';
-    font-weight: 700;
-    font-display: swap;
-    src: local('Eulyoo1945 SemiBold'), url(../fonts/Eulyoo1945-SemiBold.woff2) format('woff2'), url(../fonts/Eulyoo1945-SemiBold.woff) format('woff');
+    font-family: 'Eulyoo19452';
+    src: url(../fonts/Eulyoo1945-SemiBold.woff2) format('woff2'), url(../fonts/Eulyoo1945-SemiBold.woff) format('woff');
+    font-weight: 400;
+    font-style: normal;
 }
 @font-face {
     font-family: 'Pretendard';
