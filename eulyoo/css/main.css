@@ -505,8 +505,8 @@ header.fixed .tnb .mypage::before {
 .interview {
     background-color: rgba(244, 244, 244, 0.8) ;
     margin: 109px 0 0 0;
-    padding: 76px 0 112px 0;
-
+    padding: 76px 0 0 0;
+    height: 880px;
 }
 .interview .wrapper {
     position: relative; /* more 정렬의 기준 */
@@ -706,9 +706,7 @@ header.fixed .tnb .mypage::before {
 @media screen and (max-width:640px) {
 
                 .interview {
-                    background-color: rgba(244, 244, 244, 0.8) ;
-                    margin: 50px 0 0 0;
-                    padding: 34px 0 90px 0;
+                    height: auto;
                 
                 }
                 .interview .wrapper {
@@ -881,7 +879,179 @@ header.fixed .tnb .mypage::before {
                     display: none;
                 }
 }
+.story .tit h2 {
+    font-size: 50px ;
+    font-family: 'Eulyoo19452';
+    line-height: 1.2;
+    margin: 118px 0 64px 0;
+}
+.story .list ul li {
+    width: 297px;
+}
+.story .list ul li a .photo {
+    overflow: hidden;
+    font-size: 0; /* 이미지 하단에 여백 삭제 */
+    line-height: 0;
+}
+.story .list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.story .list ul li a strong {
+    display: block;
+    color: rgba(168, 142, 117, 1);
+    margin: 12px 0 12px 0;
+}
+.story .list ul li a h3 {
+    font-size: 24px;
+    font-family: 'Eulyoo19452' ;
+    margin: 0 0 10px 0;
+    line-height: 1.2;
+    height: 2.4em ;
+    overflow: hidden;
+}
+.story .list ul li a p {
+    line-height: 1.4;
+    overflow: hidden;
+    margin: 0 0 116px 0 ;
+}
+.story .list ul li.long a p {
+    height: 4.2em ;
 
+}
+.story .list ul li.short a p {
+    height: 8.4em ;
+}
+.story .wrapper {
+    position: relative;
+}
+.story .more {
+    position: absolute;
+    top: 51px;
+    right: 25px;
+    content: "";
+}
+.story .more a {
+    color: #3d3d3d;
+    padding: 6px 45px 5px 10px ;
+    border: 0.5px solid #3D3D3D ;
+    display: block; 
+    border-radius: 30px;
+    position: relative; /* after의 정렬 기준*/
+}
+.story .more a::after {
+    position: absolute;
+    right:  12px;
+    top: 12px;
+    width: 23px;
+    height: 5px;
+    background-image: url("data:image/svg+xml,%3Csvg width='26' height='7' viewBox='0 0 26 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.8655 0.821289L23.6045 6.10109H0.361328' stroke='%233D3D3D'/%3E%3C/svg%3E%0A");
+    content: "";
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+.story .more a:hover {
+    border-color: #A88E75;
+    color: #fff;
+    background-color: #A88E75;
+
+}
+.story .more a:hover:after {
+    position: absolute;
+    right:  12px;
+    top: 12px;
+    width: 23px;
+    height: 5px;
+    background-image: url("data:image/svg+xml,%3Csvg width='26' height='7' viewBox='0 0 26 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.9749 0.939453L23.7139 6.21925H0.470703' stroke='white'/%3E%3C/svg%3E%0A");
+    content: "";
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+@media screen and (max-width:640px) {
+                    .story .tit h2 {
+                        font-size: 30px ;
+                        font-family: 'Eulyoo1945';
+                        line-height: 1.2;
+                        margin: 64px 0 64px 0;
+                    }
+                    .story .list ul li {
+                        width: 180px;
+                    }
+                    .story .list ul li a .photo {
+                        height: 250px;
+                    }
+                    .story .list ul li a strong {
+                        font-size: 12px;
+                        margin: 24px 0 9px 0;
+                    }
+                    .story .list ul li a h3 {
+                        font-size: 15px;
+                        font-family: 'Eulyoo19452' ;
+                        margin: 0 0 10px 0;
+                        overflow: visible;
+                        height: auto;
+                    }
+                    .story .list ul li a p {
+                        display: none;
+                    }
+                    .story .wrapper {
+                        position: relative;
+                    }
+                    .story .more {
+                        position: absolute;
+                        top: auto;
+                        right: 0px;
+                        content: "";
+                        margin: 15px 0 0 0;
+                    }
+                    .story .more a {
+                        color: #3d3d3d;
+                        padding: 6px 45px 5px 10px ;
+                        border: 0.5px solid #3D3D3D ;
+                        display: block; 
+                        border-radius: 30px;
+                        position: relative; /* after의 정렬 기준*/
+                    }
+                    .story .more a::after {
+                        position: absolute;
+                        right:  12px;
+                        top: 12px;
+                        width: 23px;
+                        height: 5px;
+                        background-image: url("data:image/svg+xml,%3Csvg width='26' height='7' viewBox='0 0 26 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.8655 0.821289L23.6045 6.10109H0.361328' stroke='%233D3D3D'/%3E%3C/svg%3E%0A");
+                        content: "";
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                    
+                    }
+                    .story .more a:hover {
+                        border-color: #A88E75;
+                        color: #fff;
+                        background-color: #A88E75;
+                    
+                    }
+                    .story .more a:hover:after {
+                        position: absolute;
+                        right:  12px;
+                        top: 12px;
+                        width: 23px;
+                        height: 5px;
+                        background-image: url("data:image/svg+xml,%3Csvg width='26' height='7' viewBox='0 0 26 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.9749 0.939453L23.7139 6.21925H0.470703' stroke='white'/%3E%3C/svg%3E%0A");
+                        content: "";
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                    
+                    }
+
+}
 footer {
     margin: 500px 0 0 0 ;
 }
