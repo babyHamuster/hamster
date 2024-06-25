@@ -1137,3 +1137,86 @@ footer .copyright .f_logo img {
 footer .copyright .copy {
     color: rgba(255, 255, 255, 0.5) ;
 }
+@media screen and (max-width:640px) {
+                footer {
+                    background-color: #A88E75;
+                    color: rgba(255, 255, 255,0.8) ;
+                    padding: 93px 0 165px 0 ;
+                }
+                
+                footer .wrapper {
+                    position: relative; /* copyright 정렬의 기준 */
+                    display: flex ;
+                    justify-content: space-between;
+                    /*
+                    <div class ="wrapper">
+                        <div class ="slogan"></div>
+                        <div class ="f_info"></div>
+                        <div class ="copyright"></div> --- absolute
+                    </div>
+                    --absolute를 빼고 나머지 두개의 요소만 flex의 영향을 받음
+                    */
+                }
+                footer .slogan {
+                    color: #fff;
+                    font-family: 'Eulyoo19452';
+                    font-size: 35px ;
+                    line-height: 1.2;
+                }
+                footer .f_info  {
+                    width: 404px;
+                }
+                footer .f_info .item {
+                    margin: 0 0 50px 0 ;
+                }
+                /*
+                    <div class ="wrapper">
+                            <div class ="item"></div>
+                            <div class ="item"></div>
+                            <div class ="item"></div> -last child
+                        </div>
+                    f_info 안에 item이라는 동일한 이름의 div만 존재한다면
+                    마지막 item도 last-child 선택가능
+                */
+                footer .f_info .item:last-child {
+                    margin: 0;
+                }
+                footer .f_info .item h2 {
+                    color: #fff;
+                    font-family: 'Eulyoo19452';
+                    font-size: 30px ;
+                    line-height: 1.2;
+                    margin: 0 0 17px 0;
+                }
+                footer .f_info .item .tel li {
+                    display: flex;
+                }
+                footer .f_info .item .tel li strong {
+                    width: 4.5em;
+                }
+                footer .f_info .item .tel li span {
+                    width: calc(100% - 4.5em);
+                    /* 왼쪽 strong의 넓이*/
+                }
+                footer .f_info .item .sns {
+                    display: flex; 
+                }
+                footer .f_info .item .sns li {
+                    margin: 0 35px 0 0;
+                }
+                footer .f_info .item .sns li a:hover {
+                    text-decoration: underline;
+                }
+                footer .copyright {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                }
+                footer .copyright .f_logo img {
+                    width: 198px ;
+                    margin: 0 0 20px 0;
+                }
+                footer .copyright .copy {
+                    color: rgba(255, 255, 255, 0.5) ;
+                }
+}
