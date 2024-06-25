@@ -184,7 +184,7 @@ header .gnb ul li a:hover {
     /* .culture .wrapper 을 기준으로 정렬 */
     position: absolute;
     right: 0;
-    top: 67px ;
+    top: 50px ;
 }
 .culture .more a {
     border-bottom: 1px solid #1d1d1d ;
