@@ -51,7 +51,12 @@ header {
         visual tit는 visual 보다 위에 배치 될 수가 없음
         (감싸는 요소가 z-index 10이기 때문에 header보다 높은 숫자를 줘도 아래 배치)
     */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4) ;
+
+}
+header.fixed {
+    backdrop-filter: blur(0.5px) brightness(0.8);
+    position: fixed;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 header .wrapper {
     display: flex;
@@ -99,7 +104,7 @@ header .gnb ul li a:hover {
 }
 .visual h2 {
     text-align: left; /* 이미지도 가운데 정렬 가능 (ceter) */
-    padding: 103px 0 0 0;
+    padding: 240px 0 0 0;
 }
 .visual .camera {
     position: absolute;
@@ -232,12 +237,13 @@ header .gnb ul li a:hover {
     justify-content: space-between;
 }
 .tour .list ul li {
-    width: 190px;
-    height: 550px;
+    width: 190px;  
+    overflow: hidden; /* 내가 준 넓이보다 크면 내부요소 자르기 */
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     color: rgba(255, 255, 255, 0.8) ;
+    transition: 0.5s;
 }
 /* li중에서 active 클래스를 갖고 있는 li (띄어쓰기 주의) */
 .tour .list ul li.active {
