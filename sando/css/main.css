@@ -249,6 +249,16 @@ header .gnb ul li a:hover {
 .tour .list ul li.active {
     width: 618px;
 }
+.tour .list ul li.active a {
+    width: 618px;
+    /* transition의 영향으로 넓이가 0.5초동안
+        190 -> 618px 점점 변함
+        하지만 a에는 transition이 없기 때문에
+        즉시 넓이가 618px로 고정되기 때문에
+        내부 컨텐츠 넓이가 고정된
+        p태그의 글이 여러줄로 바뀌는 현상이 사라짐
+    */
+}
 .tour .list ul li.tour1 {
     background-image: url(../images/tour1.png);
 }
@@ -433,6 +443,7 @@ footer {
 footer .wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 }
 footer .f_nav ul {
     display: flex;
@@ -473,6 +484,9 @@ footer .copyright {
     margin: 50px 0 0 0;
     color: rgba(255,255,255, 0.5);
 }
+footer .familysite {
+    position: relative; /* list 정렬의 기준 */
+}
 footer .familysite button{
     color: #fff;
     width: 129px;
@@ -482,7 +496,50 @@ footer .familysite button{
     font-size: 15px;
     padding: 0 15px;
     text-align: left; /* 버튼의 기본은 가운데 - 왼쪽 정렬로 변경 */
-    background: url(../images/more_w.svg) no-repeat right 15px center;
-    cursor: pointer; /* 버튼에 오버시 마우스 포인터를 손바닥 모양으로 바꿔줌 */
-    /* 클릭하는 요소가 자동으로 손바닥 모양으로 바뀌어야함 클릭이 되지 않는걸 손바닥 모양으로 바꿔줌 */
+    position: relative; /* after 정렬의 기준 */
+}
+footer .familysite button::after {
+    position: absolute;
+    right: 14px;
+    top: 10px;
+    width: 12px;
+    height: 12px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+}
+footer .familysite button.btn_open::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath id='add_24dp_FILL0_wght300_GRAD0_opsz24' d='M225.308-733.308H220v-1.385h5.308V-740h1.385v5.308H232v1.385h-5.308V-728h-1.385Z' transform='translate(-220 740)' fill='%23fff'/%3E%3C/svg%3E%0A");
+}
+footer .familysite button.btn_close::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='1.385' viewBox='0 0 12 1.385'%3E%3Cpath id='remove_24dp_FILL0_wght300_GRAD0_opsz24' d='M220-508.615V-510h12v1.385Z' transform='translate(-220 510)' fill='%23fff'/%3E%3C/svg%3E%0A");
+}
+footer .familysite button.btn_close {
+    display: none;
+}
+footer .familysite .list {
+    display: none;
+    position: absolute; /* familysite를 기준으로 */
+    left: 0;
+    bottom: 33px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255, 0.6) ;
+    color: rgba(255, 255, 255);
+    background-color: #1d1d1d;
+    width: 100%;
+    padding: 10px 15px 10px 15px;
+    font-size: 15px;
+    font-weight: 300;
+}
+footer .familysite .list ul li a {
+    display: block; /* 글자 옆에 여백도 넓게 클릭되도록 */
+    line-height: 2;
+}
+/* familysite가 열렸을때 */
+footer .familysite.open button.btn_open {
+    display: none;
+}
+footer .familysite.open button.btn_close{
+    display: block;
 }

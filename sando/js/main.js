@@ -45,4 +45,19 @@ $(document).ready(function(){
         $(this).addClass('active')
    })
 
+    /*
+        footer .familysite button.btn_open 를 클릭하면
+        footer .familysite 에 open 클래스를 줘야함
+        footer .familysite button.btn_close 를 클릭하면
+        footer .familysite 에 open 클래스를 삭제함
+    */
+   $('footer .familysite button.btn_open').on('click', function(){
+        $('footer .familysite').addClass('open')
+        $('footer .familysite .list').slideDown()
+   })
+   $('footer .familysite button.btn_close').on('click', function(){
+        $('footer .familysite').removeClass('open')
+        $('footer .familysite .list').slideUp()
+    })
+
 }) //$(document).ready
