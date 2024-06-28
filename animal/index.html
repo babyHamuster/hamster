@@ -10,7 +10,7 @@
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favico.ico">
     <title>동물보호센터</title>
 </head>
 <body>
@@ -47,7 +47,23 @@
                     </div>
                     <button class="gnb_close">메뉴닫기</button>
                 </nav>
-                <div class="tnb"></div>
+                <div class="tnb">
+                    <!-- pc에서 검색 입력이 있고, 모바일에서 검색버튼을 클릭하면 검색창이 나타남 -->
+                    <a href="#n" class="btn_open">검색열기</a>
+                    <div class="search">
+                        <form>
+                            <fieldset>
+                                <div class="search_box">
+                                    <legend>검색어입력</legend>
+                                    <label for="keword">검색어</label> <!--개발자가 삭제할수도 있으니 선택자로 작성하면 안됨-->
+                                    <input type="text" id="keword" placeholder="검색">
+                                    <input type="submit">
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="link"><a href="http://www.dogcat-e.com/index.php?code=apply" target="blink" title="새창열림">전단지</a></div>
+                </div>
             </div>
         </header>
         <main class="container">
@@ -60,32 +76,23 @@
                     <ul class="swiper-wrapper">
                         <li class="swiper-slide bg1">
                             <div class="wrapper">
-                                <p>반려동물,<br>사랑으로 입양하세요<br>여러분의 삶이 행복해집니다.</p>
+                                <p>반려동물, <br>누군가의 가족입니다.</p>
                             </div>
                         </li>
                         <li class="swiper-slide bg2">
                             <div class="wrapper">
-                                <p>사람과 동물이 <br>새로운 가족으로 만나<br>아름다운 동행이 시작되는 공간입니다.</p>
+                                <p> 당신이 입양한 생명은,<br>
+                                새 삶을 구원받습니다.</p>
                             </div>
                         </li>
                         <li class="swiper-slide bg3">
                             <div class="wrapper">
-                                <p>반려동물, <br>누군가의 가족입니다.</p>
+                                <p>인간과 동물이<br>공존할 수 있는 사회</p>
                             </div>
                         </li>
                         <li class="swiper-slide bg4">
                             <div class="wrapper">
-                                <p>반려동물, <br>누군가의 가족입니다.</p>
-                            </div>
-                        </li>
-                        <li class="swiper-slide bg5">
-                            <div class="wrapper">
-                                <p>어느날 <br>고양이가 나에게 왔다</p>
-                            </div>
-                        </li>
-                        <li class="swiper-slide bg6">
-                            <div class="wrapper">
-                                <p>사람과 동물이 <br>새로운 가족으로 만나 <br>아름다운 동행이 시작되는 공간입니다.</p>
+                                <p>우리,<br>함께 살아요!</p>
                             </div>
                         </li>
                     </ul>
