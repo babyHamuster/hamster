@@ -189,13 +189,14 @@ header .gnb ul li a:hover {
     /* .culture .wrapper 을 기준으로 정렬 */
     position: absolute;
     right: 0;
-    top: 50px ;
+    top: 5px;
 }
 .culture .more a {
-    border-bottom: 1px solid #1d1d1d ;
-    display: block;
-    align-items: center;
-    background: url(../images/more_.svg) no-repeat right center;
+    padding: 10px 45px 10px 20px;
+    border: 1px solid #9f9f9f;
+    border-radius: 20px;
+    display: inline-block;
+    background: url(../images/more_.svg) no-repeat right 22px top 14px;
     /* 오른쪽에서 22px 떨어져서 있고, 위아래 가운데*/
      /*    transition: 0.1s;
       나중에 a에 class가 추가되거나 또는 오버를 해서 스타일이 변경된다면 
@@ -205,19 +206,18 @@ header .gnb ul li a:hover {
     /*  border-bottom: 1px solid #1d1d1d ; 이렇게 선언된상태에서
     오버했을때 색상만 변한다면 반드시 border-color라고 정확하게
     해당 속성명을 써줘야함; border라고 색상만 선언하면 모든게 취소됨. */
-    border-bottom: 0.5px solid #FACF67 ;
-    display: block;
-    align-items: center;
-    padding: 0 0 2px 0;
-    background-image: url(../images/more_y.svg)
+    border-color: #FACF67;
+    background-color: #FACF67;
+    background-image: url(../images/more_w.svg);
+    color: #fff;
 }
 .culture .more a span {
-    padding: 0 22px 2px 0;
     display: block;
 }
 .culture .more a:hover span {
     color: #FACF67;
     font-weight: 600;
+    color: #fff;
 }
 
 .tour {
