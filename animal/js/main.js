@@ -123,17 +123,9 @@ $(document).ready(function(){
 
     })
         const find01_swiper = new Swiper('.find .tab .find01 .swiper', { /* 팝업을 감싼는 요소의 class명 */
-        slidesPerView: 1, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+        slidesPerView: 'auto', /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
         spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
         breakpoints: {
-            640: {    /* 640px 이상일때 적용 */
-                slidesPerView: 2,
-                spaceBetween: 16,
-            },
-            768: {    /* 768px 이상일때 적용 */
-                slidesPerView: 3,
-                spaceBetween: 16,
-            },
             1024: {   /* 1024px 이상일때 적용 */
                 slidesPerView: 4,
                 spaceBetween: 24,
@@ -148,17 +140,9 @@ $(document).ready(function(){
     });//find01_swiper
 
     const find02_swiper = new Swiper('.find .tab .find02 .swiper', { /* 팝업을 감싼는 요소의 class명 */
-    slidesPerView: 1, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+    slidesPerView: 'auto', /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
     spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
     breakpoints: {
-        640: {    /* 640px 이상일때 적용 */
-            slidesPerView: 2,
-            spaceBetween: 16,
-        },
-        768: {    /* 768px 이상일때 적용 */
-            slidesPerView: 3,
-            spaceBetween: 16,
-        },
         1024: {   /* 1024px 이상일때 적용 */
             slidesPerView: 4,
             spaceBetween: 24,
@@ -172,5 +156,20 @@ $(document).ready(function(){
     },
 });//find01_swiper
 
+    /*
+    
+        find의 탭메뉴
+        .find .tab > ul > li 를 클릭하면
+        클릭한 li에만 on클래스를 줌
+        1.원래 html을 기본적으로 하나의 li에 on클래스가 있어야함
+            juqery에서 클릭하면 on을 li에는 주는 것 뿐 
+
+    */
+    $('.find .tab > ul > li').on('click', function(){
+        /* 모든 li에 있는 on클래스를 모두 지웠다가 */
+        $('.find .tab > ul > li').removeClass('on')
+        /* click한 li에만 다시 on클래스를 줌 */
+        $(this).addClass('on')
+    })
 
 })//document
