@@ -453,9 +453,18 @@ header.menu_over .tnb .link a:hover::after {
     width: 10vw;
     /*mix-blend-mode: difference;
     filter: invert(1);*/
+    /* 애니메이션 호출 */
 }
 .visual .slogan img {
-    width: 10vw;
+    width: 100%;
+    animation-name: slogan_rotate ;
+    animation-duration: 5s; /* 애니메이션 1번 실행 시간 */
+    animation-iteration-count: infinite; /* 반복횟수 - 영원히 회전 */
+    animation-timing-function: linear; /* 가속도 삭제 */
+}
+@keyframes slogan_rotate { /* 애니메이션 정의 */
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 @media screen and (max-width:1024px){
     .visual .slogan {
@@ -637,7 +646,7 @@ text-align: center;
     background-repeat: no-repeat;
     background-size: contain;
     content: "";
-    background-image: url("data:image/svg+xml,%3Csvg width='12' height='20' viewBox='0 0 12 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.41925 19.3075L0 17.8883L8.2345 9.65375L0 1.41925L1.41925 0L11.073 9.65375L1.41925 19.3075Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.548' height='13.548' viewBox='0 0 13.548 13.548'%3E%3Cpath id='add_24dp_FILL0_wght600_GRAD0_opsz24' d='M186.354-771.246H181.98a1.157,1.157,0,0,1-.85-.35,1.157,1.157,0,0,1-.35-.85,1.157,1.157,0,0,1,.35-.85,1.157,1.157,0,0,1,.85-.35h4.374v-4.374a1.157,1.157,0,0,1,.35-.85,1.157,1.157,0,0,1,.85-.35,1.157,1.157,0,0,1,.85.35,1.157,1.157,0,0,1,.35.85v4.374h4.374a1.157,1.157,0,0,1,.85.35,1.157,1.157,0,0,1,.35.85,1.157,1.157,0,0,1-.35.85,1.157,1.157,0,0,1-.85.35h-4.374v4.374a1.157,1.157,0,0,1-.35.85,1.157,1.157,0,0,1-.85.35,1.157,1.157,0,0,1-.85-.35,1.157,1.157,0,0,1-.35-.85Z' transform='translate(-180.78 779.22)' fill='%23fff'/%3E%3C/svg%3E%0A");
 } 
 /* 탭메뉴 구현 - 하나의 li에만 on클래스가 들어가 있음 */
 .find .tab { /* 탭메뉴의 정렬의 기준 */
@@ -805,9 +814,10 @@ text-align: center;
     color: #fff;
     padding: 134px 0 285px 0;
     text-align: center;
+    position: relative; /* slogan 정렬기준 */
 }
 .family h2 {
-    font-size: 45px;
+    font-size: 50px;
     font-family: 'kohi';
     margin: 0 0 65px 0;
 }
@@ -933,12 +943,43 @@ text-align: center;
 .family .list .btn_wrap .more:hover::after {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.548' height='13.548' viewBox='0 0 13.548 13.548'%3E%3Cpath id='add_24dp_FILL0_wght600_GRAD0_opsz24' d='M186.354-771.246H181.98a1.157,1.157,0,0,1-.85-.35,1.157,1.157,0,0,1-.35-.85,1.157,1.157,0,0,1,.35-.85,1.157,1.157,0,0,1,.85-.35h4.374v-4.374a1.157,1.157,0,0,1,.35-.85,1.157,1.157,0,0,1,.85-.35,1.157,1.157,0,0,1,.85.35,1.157,1.157,0,0,1,.35.85v4.374h4.374a1.157,1.157,0,0,1,.85.35,1.157,1.157,0,0,1,.35.85,1.157,1.157,0,0,1-.35.85,1.157,1.157,0,0,1-.85.35h-4.374v4.374a1.157,1.157,0,0,1-.35.85,1.157,1.157,0,0,1-.85.35,1.157,1.157,0,0,1-.85-.35,1.157,1.157,0,0,1-.35-.85Z' transform='translate(-180.78 779.22)' fill='%230A2C69'/%3E%3C/svg%3E%0A");
 }
+.family .slogan {
+/* family로 정렬*/
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 140px;
+    font-family: 'kohi';
+    /* 글자를 선만 표시 - 웹킷 일부 브라우저에서는 적용 안될 수 있음 */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(255,255,255,0.4);
+    color: transparent;
+    white-space: nowrap;
+}
+.family .slogan p {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    animation-name: slogan_move ;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes slogan_move {
+    0% { transform: translate(0,0);}
+    100% { transform: translate(-25%,0);}
+}
+/*  position absolute를 줘서 실제 글자가 들어간 만큼의 넓이를 가지게  */
 @media screen and (max-width:1024px){
     .family .list ul li {
         width: 230px;
     }
     .family .list ul li a strong {
         font-size: 17px;
+    }
+    .family .slogan {
+        font-size: 120px;
     }
 }
 @media screen and (max-width:768px){
@@ -949,7 +990,7 @@ text-align: center;
         font-size: 25px;
     }
     .family .list ul li {
-        width: 210px;
+        width: 245px;
     }
     .family .list ul li a strong {
         font-size: 15px;
@@ -970,6 +1011,9 @@ text-align: center;
         top: 9px;
         width: 12px;
         height: 12px;
+    }
+    .family .slogan {
+        font-size: 50px;
     }
 }
 footer {
