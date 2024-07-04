@@ -260,6 +260,7 @@ header.menu_over .tnb .link a:hover::after {
         margin: 75px 20px 20px 20px;
     }
     header .gnb .gnb_wrap ul.depth1 > li > a {
+        font-family: 'kohi';
         display: block;
         font-size: 20px;
         line-height: 2.5;
@@ -324,7 +325,7 @@ header.menu_over .tnb .link a:hover::after {
 }/* media */
 @media screen and (max-width:768px){
     header .wrapper {
-        height: 50px;
+        height: 100px;
     }
     header .logo a {
         width: 96px;
@@ -395,6 +396,7 @@ header.menu_over .tnb .link a:hover::after {
 }
 .visual ul li p {
     font-family: 'kohi';
+    text-align: right;
     font-size: 59px;
     line-height: 1.1;
 }
@@ -724,7 +726,7 @@ text-align: center;
 .campaign p {
     font-family: 'kohi';
     font-size: 60px;
-    line-height: 1.33;
+    line-height: 2.1;
     text-align: center;
     color: #1d1d1d;
 }
@@ -949,7 +951,7 @@ text-align: center;
     left: 0;
     bottom: 0;
     width: 100%;
-    font-size: 140px;
+    font-size: 160px;
     font-family: 'kohi';
     /* 글자를 선만 표시 - 웹킷 일부 브라우저에서는 적용 안될 수 있음 */
     -webkit-text-stroke-width: 1px;
@@ -1017,5 +1019,257 @@ text-align: center;
     }
 }
 footer {
-    margin-top: 1000px;
+    background-color: #1d1d1d;
+    padding: 135px 0 204px 0 ;
+    color: #fff;
 }
+footer .wrapper {
+    position: relative; /* family_site / sns때문에 */
+}
+footer .sns {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+footer .sns ul {
+    display: flex;
+    gap: 13px;
+}
+footer .sns ul li a {
+    display: block;
+    width: 43px;
+    height: 43px;
+    background-color: #fff;
+    border-radius: 50%;
+    font-size: 0;
+    line-height: 0;
+    position: relative; /* 아이콘 정렬의기준 */
+}
+footer .sns ul li a::before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+}
+footer .sns ul li.facebook a::before {
+    width: 13px;
+    height:24.68px ;
+    background-image: url("data:image/svg+xml,%3Csvg width='13' height='25' viewBox='0 0 13 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.1547 13.879L12.8296 9.41197H8.60986V6.51704C8.60986 5.29812 9.19612 4.10691 11.0844 4.10691H13V0.304725C13 0.304725 11.2617 0 9.59833 0C6.12848 0 3.85844 2.14003 3.85844 6.01147V9.41197H0V13.879H3.85844V24.6761H8.60986V13.879H12.1547Z' fill='%23337FFF'/%3E%3C/svg%3E%0A");
+}
+footer .sns ul li.twitter a::before {
+    width: 23px;
+    height:20.73px ;
+    background-image: url("data:image/svg+xml,%3Csvg width='23' height='21' viewBox='0 0 23 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.8884 2.47895C22.1605 2.83972 21.3529 3.06083 20.5612 3.2063C20.9331 3.13647 21.4857 2.3975 21.7035 2.09492C22.0383 1.63524 22.3199 1.11736 22.474 0.552944C22.4952 0.506393 22.5112 0.454027 22.474 0.419114C22.4209 0.395839 22.389 0.407479 22.3518 0.430754C21.4697 0.948624 20.5612 1.32102 19.5941 1.58868C19.5144 1.61196 19.456 1.58868 19.4029 1.53632C19.3232 1.4374 19.2488 1.3443 19.1638 1.26866C18.7546 0.890438 18.3189 0.593676 17.8301 0.372563C17.1819 0.0816252 16.4752 -0.040566 15.7792 0.0118029C15.1044 0.058353 14.4349 0.267828 13.8345 0.611135C13.2341 0.954442 12.6922 1.4374 12.2671 2.01346C11.8261 2.61279 11.4966 3.31686 11.3319 4.06748C11.1725 4.78901 11.1832 5.50471 11.2841 6.23788C11.3001 6.36007 11.2841 6.37753 11.1885 6.36007C7.40007 5.74329 4.25992 4.2595 1.71484 1.07664C1.60326 0.936987 1.54482 0.936981 1.45449 1.08827C0.338693 2.92118 0.88064 5.85966 2.27273 7.30271C2.4587 7.49473 2.64996 7.68674 2.85718 7.86131C2.7828 7.87876 1.85296 7.76821 1.0294 7.30271C0.917819 7.22707 0.864709 7.26779 0.854083 7.40744C0.843456 7.60528 0.854081 7.78567 0.885961 8.00096C1.09849 9.85715 2.27271 11.5737 3.88265 12.2428C4.07393 12.3301 4.28647 12.4058 4.48838 12.4465C4.12176 12.5338 3.74451 12.5978 2.69779 12.5047C2.56496 12.4756 2.51714 12.5512 2.56496 12.6851C3.35664 15.0417 5.05692 15.7399 6.33212 16.1414C6.50214 16.1763 6.67215 16.1763 6.84749 16.2171C6.83687 16.2345 6.82624 16.2345 6.81561 16.252C6.39055 16.956 4.92409 17.4855 4.24398 17.7474C3.00067 18.2245 1.65106 18.434 0.338674 18.2944C0.126141 18.2594 0.0836525 18.2653 0.025206 18.2944C-0.0332406 18.3351 0.0198849 18.3874 0.0836447 18.4456C0.349311 18.6377 0.620273 18.8064 0.896566 18.9751C1.73076 19.4581 2.60217 19.8421 3.51074 20.1214C8.20772 21.5412 13.4945 20.4997 17.0172 16.6651C19.7854 13.651 20.7578 9.49639 20.7578 5.34179C20.7578 5.17887 20.9331 5.09158 21.0394 5.0043C21.762 4.41079 22.3411 3.7009 22.8778 2.90954C23 2.72916 23 2.57205 23 2.50805V2.48478C23 2.42077 23 2.43823 22.9044 2.48478L22.8884 2.47895Z' fill='%2333CCFF'/%3E%3C/svg%3E%0A");
+}
+footer .sns ul li.naver a::before {
+    width: 24px;
+    height:24.68px ;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.6251 0.00382612H0V24.6761H11.6251C18.4586 24.6761 24 19.1512 24 12.3381C24 5.5249 18.4586 0 11.6251 0V0.00382612ZM11.8673 16.7741H7.69108V7.90587H11.8673C14.3246 7.90587 16.3128 9.89192 16.3128 12.3381C16.3128 14.7842 14.3208 16.7703 11.8673 16.7703V16.7741Z' fill='%230C8AFF'/%3E%3C/svg%3E%0A");
+}
+footer .sns ul li.daum a::before {
+    width: 24px;
+    height:21.71px ;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='22' viewBox='0 0 24 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24 0V21.715H15.9465L8.05349 10.7828V21.715H0V0H8.05349L15.9465 11.3717V0H24Z' fill='%236BBC44'/%3E%3C/svg%3E%0A");
+}
+
+footer .f_nav ul {
+    margin: 0 0 18px 0;
+    display: flex;
+    gap: 34px;
+}
+footer .f_nav ul li {  
+    position: relative;
+}
+footer .f_nav ul li::after {
+    position: absolute;
+    right: -18px;
+    top: 5px;
+    width: 1px;
+    height: 10px;
+    background-color: rgba(255,255,255,0.2);
+    content: "";
+}
+footer .f_nav ul li:last-child:after {
+    display: none;
+}
+footer .family_site {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+footer .family_site button {
+    display: none;
+}
+footer .family_site .list ul li a {
+    text-align: right;
+    display: block;
+}
+footer .family_site .list ul li a span {
+    padding-right: 20px;
+    /* 아이콘이 들어갈 여백 */
+    position: relative; /* after 정렬의 기준 */
+    line-height: 2;
+}
+footer .family_site .list ul li a span::after {
+    position: absolute;
+    right: 0;
+    top: 2px;
+    width: 18px;
+    height: 18px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_69_2289' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='18' height='18'%3E%3Crect width='18' height='18' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_69_2289)'%3E%3Cpath d='M4.21162 15C3.86637 15 3.57812 14.8844 3.34688 14.6531C3.11563 14.4219 3 14.1336 3 13.7884V4.21162C3 3.86637 3.11563 3.57812 3.34688 3.34688C3.57812 3.11563 3.86637 3 4.21162 3H8.42306V3.75H4.21162C4.09612 3.75 3.99031 3.79806 3.89419 3.89419C3.79806 3.99031 3.75 4.09612 3.75 4.21162V13.7884C3.75 13.9039 3.79806 14.0097 3.89419 14.1058C3.99031 14.2019 4.09612 14.25 4.21162 14.25H13.7884C13.9039 14.25 14.0097 14.2019 14.1058 14.1058C14.2019 14.0097 14.25 13.9039 14.25 13.7884V9.57694H15V13.7884C15 14.1336 14.8844 14.4219 14.6531 14.6531C14.4219 14.8844 14.1336 15 13.7884 15H4.21162ZM7.30387 11.2269L6.77306 10.6961L13.7192 3.75H10.5V3H15V7.5H14.25V4.28081L7.30387 11.2269Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+footer .copyright {
+    margin: 155px 0 0 0;
+    color: rgba(255,255,255,0.6);
+}
+@media screen and (max-width:768px){ /* 모바일 반응형 */
+            footer {
+                padding: 62px 0 82px 0 ;
+            }
+            footer .sns {
+                position: relative;
+                right: auto; /* 해제 */
+                bottom: auto;
+                top: 0;
+            }
+            footer .sns ul {
+                gap: 32px;
+                justify-content: center;
+                margin: 0 0 82PX 0;
+            }
+            footer .sns ul li a {
+                width: 35px;
+                height: 35px;
+                background-color:transparent;
+            }
+            footer .sns ul li.facebook a::before {
+                width: 9p;
+                height:18px ;
+                background-image: url("data:image/svg+xml,%3Csvg width='9' height='18' viewBox='0 0 9 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.41479 10.1241L8.88201 6.86556H5.96067V4.75386C5.96067 3.86472 6.36655 2.99579 7.67383 2.99579H9V0.222282C9 0.222282 7.79654 0 6.645 0C4.2428 0 2.67123 1.56104 2.67123 4.38507V6.86556H0V10.1241H2.67123V18H5.96067V10.1241H8.41479Z' fill='white'/%3E%3C/svg%3E%0A");
+            }
+            footer .sns ul li.twitter a::before {
+                width: 17px;
+                height:16px ;
+                background-image: url("data:image/svg+xml,%3Csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.9175 1.91352C16.3795 2.19199 15.7825 2.36267 15.1974 2.47496C15.4723 2.42106 15.8807 1.85064 16.0418 1.61708C16.2892 1.26225 16.4973 0.862498 16.6112 0.42682C16.6269 0.390888 16.6387 0.350466 16.6112 0.323517C16.5719 0.30555 16.5484 0.314535 16.5209 0.332502C15.8689 0.732248 15.1974 1.0197 14.4826 1.22631C14.4237 1.24428 14.3805 1.22631 14.3413 1.18589C14.2823 1.10953 14.2274 1.03767 14.1645 0.979283C13.8621 0.687334 13.5401 0.458262 13.1788 0.287583C12.6997 0.0630069 12.1773 -0.0313131 11.6629 0.0091107C11.1641 0.045043 10.6693 0.206738 10.2255 0.471738C9.78174 0.736738 9.38116 1.10954 9.06698 1.5542C8.74102 2.01683 8.49752 2.5603 8.37578 3.13971C8.25796 3.69666 8.26583 4.24912 8.34045 4.81505C8.35223 4.90937 8.34043 4.92285 8.26974 4.90937C5.46962 4.43327 3.14864 3.28793 1.26749 0.831062C1.18502 0.723265 1.14182 0.72326 1.07506 0.84004C0.250338 2.25487 0.650908 4.5231 1.67984 5.637C1.8173 5.78522 1.95867 5.93344 2.11183 6.06818C2.05685 6.08166 1.36958 5.99632 0.76086 5.637C0.678388 5.57861 0.639133 5.61005 0.631279 5.71784C0.623424 5.87056 0.631278 6.0098 0.654841 6.17598C0.81193 7.60878 1.67983 8.93378 2.86978 9.4503C3.01116 9.51768 3.16826 9.57607 3.3175 9.60751C3.04652 9.67488 2.76768 9.72429 1.99402 9.65243C1.89584 9.62997 1.86049 9.68836 1.89584 9.79167C2.481 11.6107 3.73772 12.1497 4.68026 12.4596C4.80593 12.4866 4.93159 12.4866 5.06119 12.518C5.05334 12.5315 5.04548 12.5315 5.03763 12.545C4.72345 13.0885 3.63954 13.4972 3.13686 13.6993C2.21788 14.0676 1.22035 14.2293 0.250324 14.1215C0.0932346 14.0946 0.0618301 14.099 0.0186305 14.1215C-0.0245691 14.1529 0.0146975 14.1934 0.0618243 14.2383C0.258186 14.3865 0.458463 14.5168 0.662679 14.647C1.27926 15.0198 1.92334 15.3162 2.5949 15.5318C6.06657 16.6278 9.97417 15.8238 12.5779 12.8639C14.624 10.5373 15.3427 7.33031 15.3427 4.12336C15.3427 3.99759 15.4723 3.93022 15.5508 3.86285C16.085 3.40471 16.513 2.85674 16.9097 2.24589C17 2.10665 17 1.98538 17 1.93597V1.91801C17 1.8686 17 1.88208 16.9293 1.91801L16.9175 1.91352Z' fill='white'/%3E%3C/svg%3E%0A");
+            }
+            footer .sns ul li.naver a::before {
+                width: 17px;
+                height:17px ;
+                background-image: url("data:image/svg+xml,%3Csvg width='16' height='18' viewBox='0 0 16 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.75004 0.00279096H0V18H7.75004C12.3057 18 16 13.9699 16 9C16 4.03014 12.3057 0 7.75004 0V0.00279096ZM7.91155 12.2359H5.12739V5.76694H7.91155C9.54975 5.76694 10.8752 7.21566 10.8752 9C10.8752 10.7843 9.54719 12.2331 7.91155 12.2331V12.2359Z' fill='white'/%3E%3C/svg%3E%0A");
+            }
+            footer .sns ul li.daum a::before {
+                width: 16px;
+                height:16px ;
+                background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 0V15H9.96657L5.03343 7.44842V15H0V0H5.03343L9.96657 7.85518V0H15Z' fill='white'/%3E%3C/svg%3E%0A");
+            }
+            footer .f_nav {
+                margin: 33px 0 30px 0;
+            }
+            footer .f_nav ul {
+                margin: 0 0 13px 0;
+                flex-wrap: wrap; /* 여러줄 허용 */
+                justify-content: center;
+                gap: 34px;
+            }
+            footer .f_nav ul li {  
+                margin: 0 34px 0 0;
+                font-size: 13px;
+            }
+            footer .f_nav ul li::after {
+                position: absolute;
+                right: -35px;
+                top: 5px;
+                width: 1px;
+                height: 10px;
+                background-color: rgba(255,255,255,0.2);
+                content: "";
+                
+            }
+            footer .f_nav ul li:last-child:after {
+                display: none;
+            }
+            footer .family_site {
+                position: relative;
+                right: auto;
+                top: auto;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            footer .family_site button.open {
+                display: block;
+                background-color: #2d2d2d;
+            }
+            footer .family_site button {
+                width: 100%;
+                height: 39px;
+                position: relative;
+            }
+            footer .family_site button::after {
+                position: absolute;
+                left: auto;
+                right: 0;
+                top: 18px;
+                width: 16px;
+                height: 16px;
+                transform: translate(-50%,-50%);
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                content: "";
+                text-align: right;
+            }
+            footer .family_site button.open::after {
+                background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_18_12405' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect x='24' y='24' width='24' height='24' transform='rotate(-180 24 24)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_18_12405)'%3E%3Cpath d='M12 8.6L18 14.6L16.6 16L12 11.4L7.4 16L6 14.6L12 8.6Z' fill='white' fill-opacity='0.8'/%3E%3C/g%3E%3C/svg%3E%0A");
+            }
+            footer .family_site button.close::after {
+                background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_69_136' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_69_136)'%3E%3Cpath d='M12 15.4L6 9.4L7.4 8L12 12.6L16.6 8L18 9.4L12 15.4Z' fill='white' fill-opacity='0.8'/%3E%3C/g%3E%3C/svg%3E%0A");
+            }
+            footer .family_site .list {
+                display: none;
+                position: absolute; /* 패밀리 사이트를 기준으로 */
+                left: 0;
+                bottom: 40px;
+                width: 100%;
+                background-color: #2d2d2d;
+                border-radius: 10px;
+                padding: 25px 0 25px 20px;
+            }
+            footer .family_site .list ul li a {
+                text-align: left;
+            }
+            footer .family_site .list ul li a span {
+                padding-right: 20px;
+                /* 아이콘이 들어갈 여백 */
+                position: relative; /* after 정렬의 기준 */
+                line-height: 2.5;
+            }
+            footer .family_site .list ul li a span::after {
+                padding-right: 20px;
+                /* 아이콘이 들어갈 여백 */
+                position: relative; /* after 정렬의 기준 */
+                line-height: 2.5;
+            }
+            footer .family_site.open button.open {
+                display: none;/* 숨겨짐 */
+            }
+            footer .family_site.open button.close {
+                display: block; /* 나타남 */
+                background-color: #2d2d2d;
+            }
+            footer .family_site.open .list {
+                display: block; /* 나타남 */
+            }
+            /* family_site가 열렸을때 */
+            footer .copyright {
+                margin: 36px 0 0 0;
+                text-align: center;
+            }    
+}/* media */

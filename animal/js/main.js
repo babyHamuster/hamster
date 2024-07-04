@@ -188,5 +188,17 @@ $(document).ready(function(){
             prevEl: '.family .btn_wrap .prev',
         },
     });//swiper
-
-})//document
+    
+    /*
+        family_site 열고 닫기
+        footer .family_site button.open 을 클릭하면 family_site에 open 추가
+        footer .family_site button.close 을 클릭하면 family_site에 open 삭제 close 추가  
+    */
+    $('footer .family_site button.open').on('click' , function(){
+        $('footer .family_site').addClass('open')
+    })
+    $('footer .family_site button.close').on('click' , function(){
+        $('footer .family_site').removeClass('open')
+    })
+})
+//document
