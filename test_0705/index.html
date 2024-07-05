@@ -10,17 +10,19 @@
 </head>
 <body>
     <div id="wrap">
-        <header>
-            <div class="wrapper">
+        <!-- pc 메뉴에서 마우스를 오버해서 하위메뉴가 나타나면 : menu_over 클래스
+            mobile 메뉴에서 메뉴열기를 클릭하면 : menu_open 클래스 -->
+        <header class="">
+            <div class="inner">
                 <h1 class="logo"><a href="index.html">로고</a></h1>
                 <nav class="gnb">
                     <button class="gnb_open">메뉴열기</button>
                     <div class="gnb_wrap">
                         <ul class="depth1">
-                            <li>
+                            <!--메뉴에 오버하면 on 클래스-->
+                            <li class="">
                                 <a href="#n"><span>BUSINESS</span></a>
                                 <ul class="depth2">
-                                    <li><a href="#n">Business</a></li>
                                     <li><a href="#n">스마트홈</a></li>
                                     <li><a href="#n">스마트 보안</a></li>
                                     <li><a href="#n">서비스 사업</a></li>
