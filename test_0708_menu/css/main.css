@@ -1,0 +1,263 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+
+header {
+    position: absolute;/* body를 기준으로*/
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+header .inner {
+    margin: 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+header .logo {
+    margin: 35px 0 0 0;
+}
+header .logo a {
+    width: 99px;
+    height: 59px;
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    position: relative; /* before의 정렬 기준 */
+}
+header .logo a::before {
+    position: absolute;
+    left: 0;
+    top: -9px;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/logo_w.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+}
+/*
+    1025이상 - pc메뉴 유지
+    1024 ~ 769px 까지는 - 모바일메뉴에 header 높이 100px
+    768이하 - 모바일 메뉴에 header 높이 50px
+*/
+@media screen and (min-width:1025px){ /* 1025이상에서만 적용 */
+            header .gnb button {
+                display: none; /* 모바일에서만 보임 */
+            }
+            header .gnb .gnb_wrap ul.depth1 {
+                display: flex;
+            }
+            header .gnb .gnb_wrap ul.depth1 > li {
+                width: 175px;
+                text-align: center;
+                position: relative; /* depth2의 정렬기준 */
+            }
+            header .gnb .gnb_wrap ul.depth1 > li > a {
+                display: block; /* li와 넓이 동일 */
+                line-height: 100px ; /* header의 높이와 동일 */
+                font-size: 20px;
+                font-family: 'kohi';
+            }
+            header .gnb .gnb_wrap ul.depth1 > li.on > a span {
+                color: #FF6161;
+                position: relative; /* after의 정렬 기준 */
+            }
+            header .gnb .gnb_wrap ul.depth1 > li.on > a span::after { 
+                position: absolute;
+                left: 0;
+                bottom: -47px;
+                z-index: 10;
+                width: 100%;
+                height: 4px;
+                background-color: #FF6161;
+                content: "";
+            }
+            header .gnb .gnb_wrap ul.depth2 {
+                display: none; /* 오버했을때만 나타남 */
+                position: absolute;
+                left: 0;
+                top: 100px; /* header 높이만큼*/
+                width: 100%; /* li와 넓이 동일 */
+                padding-top: 20px;
+                /* 1차메뉴 a와 2차메뉴 사이의 여백 반드시 padding */
+            }
+            header .gnb .gnb_wrap ul.depth2 > li > a {
+                display: block; /* ul사이즈와 동일 */
+                line-height: 2;
+                color: #000;
+            }
+            header .gnb .gnb_wrap ul.depth2 > li > a:hover,
+            header .gnb .gnb_wrap ul.depth2 > li > a:focus {
+                color: #FF6161;
+            }
+            /* 메뉴에 오버했을때 */
+            header.menu_over {
+                color: #1d1d1d;
+            }
+            header.menu_over::before {
+                position: absolute; /* header을 기준으로 정렬 */
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 270px;
+                background-color: #fff;
+                content: "";
+            }
+            header.menu_over::after {
+                position: absolute;
+                left: 0;
+                top: 100px;
+                width: 100%;
+                height: 1px;
+                background-color: rgba(0, 0, 0, 0.3) ;
+                content: "";
+            }
+            header.menu_over .logo a::before {
+                background-image: url(../images/logo.svg);
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                content: "";
+            }
+            header.menu_over .gnb .gnb_wrap ul.depth2 {
+                display: block; /* 숨긴거 보이기 */
+            } 
+}/* media 종료 */
+
+@media screen and (max-width:1024px) {
+            header .gnb button {
+                position: absolute; /* header을 기준으로 정렬 */
+                right: 0;
+                top: 0;
+                width: 60px;
+                height: 100%; /* header 높이와 동일 */
+                font-size: 0;
+                line-height: 0;
+            }
+            header .gnb button::before {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                background-position: center center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                content: "";
+            }
+            header .gnb button.gnb_open::before {
+                width: 33px;
+                height: 33px;
+                background-image: url("data:image/svg+xml,%3Csvg width='33' height='33' viewBox='0 0 33 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_2_183' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='33' height='33'%3E%3Crect width='33' height='33' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_2_183)'%3E%3Cpath d='M4.8125 24.2474V22.1853H28.1875V24.2474H4.8125ZM4.8125 17.5313V15.4688H28.1875V17.5313H4.8125ZM4.8125 10.8147V8.75256H28.1875V10.8147H4.8125Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+            }
+            header .gnb button.gnb_close::before {
+                width: 33px;
+                height: 33px;
+                background-image: url("data:image/svg+xml,%3Csvg width='33' height='33' viewBox='0 0 33 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_2_232' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='33' height='33'%3E%3Crect width='33' height='33' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_2_232)'%3E%3Cpath d='M8.79998 25.6489L7.35107 24.2L15.0511 16.5L7.35107 8.80001L8.79998 7.3511L16.5 15.0511L24.2 7.3511L25.6489 8.80001L17.9489 16.5L25.6489 24.2L24.2 25.6489L16.5 17.9489L8.79998 25.6489Z' fill='%231C1B1F'/%3E%3C/g%3E%3C/svg%3E%0A");
+            }
+            header .gnb button.gnb_close {
+                display: none;
+            }
+            header .gnb .gnb_wrap {
+                display: none;
+                position: absolute; /* header을 기준으로 정렬 */
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100vh; 
+                /* header의 높이보다 더 크고 브라우저의 높이만하게
+                    100%로 주면 header의 높이와 동일해짐 */
+                background-color: #fff;
+                color: #3d3d3d;
+            
+            }
+            header .gnb .gnb_wrap ul.depth1 {
+                margin-top: 100px; /* header의 높이 */ 
+            }
+            header .gnb .gnb_wrap ul.depth1 > li {
+                border-bottom: 1px solid rgba(29, 29, 29, 0.8);
+            }
+            header .gnb .gnb_wrap ul.depth1 > li:first-child {
+                border-top: 1px solid rgba(29, 29, 29, 0.8);
+            }
+            header .gnb .gnb_wrap ul.depth1 > li > a {
+                display: block;
+                font-size: 15px;
+                font-family: 'kohi';
+                line-height: 66px;
+                color: #1d1d1d;
+                padding: 0 21px;
+                position: relative;/* after 정렬의 기준 */
+            }
+            header .gnb .gnb_wrap ul.depth1 > li > a::after {
+                position: absolute;
+                right: 15px;
+                top: 10px;
+                width: 27px;
+                height: 40px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: contain;
+                background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_2_271' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect x='24' y='24' width='24' height='24' transform='rotate(180 24 24)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_2_271)'%3E%3Cpath d='M12 13.2L16.6 8.6L18 10L12 16L6 10L7.4 8.6L12 13.2Z' fill='%231C1B1F'/%3E%3C/g%3E%3C/svg%3E%0A");
+                content: "";
+            }
+            header .gnb .gnb_wrap ul.depth1 > li.open > a {
+                color: #FF6161;
+            } 
+            header .gnb .gnb_wrap ul.depth1 > li.open > a::after {
+                background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_2_259' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_2_259)'%3E%3Cpath d='M12 10.8L7.4 15.4L6 14L12 8L18 14L16.6 15.4L12 10.8Z' fill='%23FF6161'/%3E%3C/g%3E%3C/svg%3E%0A");
+            }
+            header .gnb .gnb_wrap ul.depth2 {
+                display: none; /* 2차 메뉴 숨김 */
+                background-color: rgba(251, 251, 251, 1);
+                padding: 20px 40px;
+            } 
+            header .gnb .gnb_wrap ul.depth1 > li.open ul.depth2 {
+                display: block; /* 나타남 */
+            }
+            header .gnb .gnb_wrap ul.depth2 > li > a {
+                display: block; /* li와 넓이를 같게 */
+                line-height: 2;
+            }
+            /* 메뉴가 열렸을때 */
+            header.menu_open .gnb button.gnb_open {
+                display: none; /* 숨김 */
+            }
+            header.menu_open .gnb button.gnb_close {
+                display: block; /* 나타남 */
+            }
+            header.menu_open .gnb .gnb_wrap {
+                display: block; /* 나타남 */
+            }
+}/* media 종료 */
+
+@media screen and (max-width:768px) { /* 768이하에서는 */
+            header {
+                height: 50px;
+            }
+            header .gnb .gnb_wrap ul.depth1 {
+                margin-top: 50px; /* header의 높이 */ 
+            }
+            header .logo {
+                margin: 10px 0 0 0;
+            }
+            header .logo a {
+                width: 48px;
+                height: 30px;
+            }
+            header .logo a::before {
+                top: 0px;
+            }
+}/* media 종료 */
+
+.visual {
+    height: 100vh; /* 브라우저의 높이와 동일 */
+    margin-bottom: 100vh;
+    background: url(../images/visual_bg.png) no-repeat center center / cover ;
+}
+.visual h2 {
+    display: none; /* 숨김 */
+}
