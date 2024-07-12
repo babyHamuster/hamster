@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'min';
+    font-weight: 400;
+    font-style: normal;
+    src: url(../fonts/MinSans-Regular.woff) format('woff');
+}
+@font-face {
+    font-family: 'kohi';
+    font-weight: 400;
+    font-style: normal;
+    src: url(../fonts/KOHIBaeumOTF.woff) format('woff');
+}
