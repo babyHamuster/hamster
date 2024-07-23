@@ -626,9 +626,6 @@ footer .copyright {
     footer .f_nav {
         margin: 30px 0 0 0;
     }
-    footer .f_nav ul {
-        flex: wrap;
-    }
     footer .f_nav ul li {
         margin: 25px ;
         position: relative; /* after의 정렬기준 */
