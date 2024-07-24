@@ -739,6 +739,7 @@ footer .copyright {
     display: block;
     line-height: 50px;
     padding: 0 15px;
+    white-space: nowrap;
 }
 .sub_menu .lnb ul li:first-child a {
     padding-left: 0;
