@@ -47,3 +47,7 @@ html, body {
         font-size: 13px;
     }
 }/* media */
+a:focus,
+button:focus {
+    outline: 1px dashed #3675B0;
+}
