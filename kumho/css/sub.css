@@ -57,33 +57,55 @@
 
 }
 @media screen and (max-width:1024px) {
-    .cts_ceo .photo_wrap .sign {
-        right: 150px;
-        width: 350px;
+            .cts_ceo .photo_wrap .sign {
+                right: 150px;
+                width: 350px;
     }
 }
 @media screen and (max-width:768px) {
-    .cts_ceo {
-        padding: 50px 0 250px 0;
-    }
-    .cts_ceo .photo_wrap .sign {
-        bottom: -600px;
-        right: -97px;
-        display: block;
-    }
-    .cts_ceo .photo_wrap span {
-        margin-left: 100px;
-    }
-    .cts_ceo .photo_wrap {
-        width: auto;
-        margin: 0 auto;
-    }
-    .cts_ceo .txt_wrap .txt {
-        font-size: 13px;
-    }
+            .cts_ceo {
+                padding: 50px 0 250px 0;
+            }
+            .cts_ceo .photo_wrap .sign {
+                bottom: -600px;
+                right: -97px;
+                display: block;
+            }
+            .cts_ceo .photo_wrap span {
+                margin-left: 100px;
+            }
+            .cts_ceo .photo_wrap {
+                width: auto;
+                margin: 0 auto;
+            }
+            .cts_ceo .txt_wrap .txt {
+                font-size: 13px;
+            }
+        }
+        @media screen and (max-width:400px) {
+            .cts_ceo .photo_wrap .sign {
+                bottom: -720px;
+            }
+} /* media */
+
+/* 회사소개 - 연혁 */
+.cts_history {
+    margin: 71px 0 200px 0 ;
 }
-@media screen and (max-width:400px) {
-    .cts_ceo .photo_wrap .sign {
-        bottom: -720px;
-    }
+.cts_history .tab_area .tab_btn ul {
+    display: flex;
+    font-weight: 400;
+    color: #1d1d1d ;
+    line-height: 1.1;
+}
+.cts_history .tab_area .tab_btn ul li button {
+    padding: 16px 76px;
+    font-size: 28px;
+    background-color: #f4f4f4;
+}
+.cts_history .tab_area .tab_btn ul li.active button ,
+.cts_history .tab_area .tab_btn ul li button:hover {
+    border: 1px solid #3675B0;
+    color: #3675B0;
+    font-weight: 600;
 }
