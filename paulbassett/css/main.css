@@ -34,13 +34,13 @@
     background-color: #fff;
 }
 @media screen and (max-width:768px) {
-    .visual_popup .popup .popup_item {
-        height: 100%;
-    }
-    .visual_popup .popup .popup_item img.pc {
-        display: none;
-    }
-    .visual_popup .popup .popup_item img.mo { 
-        display: block;
-    }
+        .visual_popup .popup .popup_item {
+            height: 100%;
+        }
+        .visual_popup .popup .popup_item img.pc {
+            display: none;
+        }
+        .visual_popup .popup .popup_item img.mo { 
+            display: block;
+        }
 }
