@@ -41,10 +41,6 @@ header {
             color: var(--txt-color-gray);
             position: relative;
         }
-        header  .header_top .tnb ul li a:hover {
-            color: var(--txt-color-tit);
-            font-weight: 700;
-        }
         header  .header_top .tnb ul li a::before {
             position: absolute;
             left: -2px;
@@ -96,31 +92,129 @@ header {
             background-repeat: no-repeat;
             content: "";
         }
-        header  .header_sub .gnb ul.depth1 {
+        header  .header_sub .gnb .gnb_open ,
+        header  .header_sub .gnb .gnb_close {
+            display: none;
+        }
+        header  .header_sub .gnb_wrap ul.depth1 {
             display: flex;
         }
-        header  .header_sub .gnb ul.depth1 > li { 
+        header  .header_sub .gnb .gnb_wrap ul.depth1 > li { 
             width: 16.66%;
+            min-width: 160px;
+            /* ul 넓이의 16% 정도의 넓이를 갖음 - 단 최소 172px는 줌 */
             text-align: center;
             position: relative; /* depth2 정렬의 기준 */
         }
-        header  .header_sub .gnb ul.depth1 > li > a {
+        header  .header_sub .gnb .gnb_wrap ul.depth1 > li > a {
             font-size: 1.25rem ;
             font-weight: 700;
             color: var(--txt-color-tit);
             line-height: 68px;
             display: block;
+            white-space: nowrap;
         }
-        header  .header_sub .gnb ul.depth2 {
+        header  .header_sub .gnb .gnb_wrap ul.depth1 > li.over > a {
+            color: var(--color-main1);
+        }
+        header  .header_sub .gnb .gnb_wrap ul.depth1 > li.over > a > span {
+            position: relative;
+        }
+        header  .header_sub .gnb .gnb_wrap ul.depth1 > li.over > a > span::after {
+            position: absolute;
+            left: -5px;
+            bottom: -24px;
+            z-index: 10;
+            width: calc(100% + 10px);
+            height: 3px;
+            background-color: var(--color-main1);
+            content: "";
+        }
+        header  .header_sub .gnb_wrap ul.depth1 > li > a:hover {
+            color: var(--color-main1);
+            font-weight: 800;
+            letter-spacing: -0.2px;
+        }
+        header  .header_sub .gnb .gnb_wrap ul.depth2 {
             /* header밖에 존재하는 요소 position: absolute */
             position: absolute;
             left: 0;
             top: 68px;
             width: 100%;
             display: none;
+            padding-top: 10px;
+            
+        }
+        header.menu_over .header_sub .gnb .gnb_wrap ul.depth2 > li > a {
+            display: block;
+            line-height: 3;
+            white-space: nowrap;
+        }
+        header.menu_over .header_sub .gnb .gnb_wrap ul.depth2 > li:hover > a {
+            color: var(--color-main1);
+            font-weight: 700;
+        }
+        header.menu_over .header_sub .gnb .gnb_wrap ul.depth2 {
+            display: block;
+        }
+        header.menu_over::before {
+            position: absolute; /* header을 기준으로 정렬 */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 487px;
+            background-color: #f7f7f7;
+            box-shadow: 0 0 10px rgba(0, 0,0,0.2 );
+            content: "";
+        }
+        header.menu_over::after {
+            position: absolute; /* header을 기준으로 정렬 */
+            left: 0;
+            top: 150px;
+            width: 100%;
+            height: 1px;
+            background-color: #ededed;
+            content: "";
+        }
+        header.fixed {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+        header.fixed + .container {
+            margin-top: 100px;
+        }
+        /* header가 고정일때 */
+        header.fixed .wrapper {
+            width: auto;
+            margin: 0 20px;
+        }
+        header.fixed .header_top {
+            display: none;
+        }
+        header.fixed .header_sub {
+            display: flex;
+            justify-content: space-between;
+        }
+        header.fixed  .header_sub .logo {
+            position: relative; /* absolute 해제 */
+            left: auto;
+            transform: translate(0,0);
+            top: auto;
+            margin-top: 8px ;
         }
 }/*media*/
 /* 1024이하 - 모바일 */
+@media screen and (max-width:1300px) {
+/* 1024~1300 */
+header  .header_sub .gnb .gnb_wrap ul.depth1 > li > a {
+    font-size: 1.20rem;
+}
+header  .header_top .tnb ul > li > a {
+    font-size: 0.85rem;
+}
+}
 @media screen and (max-width:1024px) {
         header .header_top {
             display: none;

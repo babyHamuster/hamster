@@ -23,7 +23,7 @@
             mobile버전에서 메뉴를 클릭해서 열었을때 menu_open
             상단에 메뉴가 고정될때 fixed 
         -->
-        <header>
+        <header class=" fixed">
             <div class="wrapper">
                 <div class="header_top">
                     <div class="tnb">
@@ -43,56 +43,65 @@
                 <div class="header_sub">
                     <h1 class="logo"><a href="index.html">폴바셋</a></h1>
                     <nav class="gnb">
-                        <ul class="depth1">
-                            <li>
-                                <a href="#n">ABOUT US</a>
-                                <ul class="depth2">
-                                    <li><a href="#n"><span>Brand</span></a></li>
-                                    <li><a href="#n"><span>회사소개</span></a></li>
-                                    <li><a href="#n"><span>CSR</span></a></li>
+                        <button class="gnb_open">메뉴열기</button>
+                                <div class="gnb_wrap">
+                                    <ul class="depth1">
+                                        <!--
+                                            pc버전에서 메뉴에 마우스를 오버하면 on
+                                            mobile버전에서 메뉴가 열리면 open
+                                        -->
+                                    <li class="over">
+                                        <a href="#n">ABOUT US</a>
+                                        <ul class="depth2">
+                                            <li><a href="#n"><span>Brand</span></a></li>
+                                            <li><a href="#n"><span>회사소개</span></a></li>
+                                            <li><a href="#n"><span>CSR</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#n">MENU</a>
+                                        <ul class="depth2">
+                                            <li><a href="#n"><span>NEW</span></a></li>
+                                            <li><a href="#n"><span>COFFEE</span></a></li>
+                                            <li><a href="#n"><span>BEVERAGE</span></a></li>
+                                            <li><a href="#n"><span>ICE-CREAM</span></a></li>
+                                            <li><a href="#n"><span>FOOD</span></a></li>
+                                            <li><a href="#n"><span>PRODUCT</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#n">STORE</a>
+                                        <ul class="depth2">
+                                            <li><a href="#n"><span>매장찾기</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#n">SOCIETY</a>
+                                        <ul class="depth2">
+                                            <li><a href="#n"><span>Paul Bassett Society</span></a></li>
+                                            <li><a href="#n"><span>회원 등급 혜택</span></a></li>
+                                            <li><a href="#n"><span>e-Card 선물</span></a></li>
+                                            <li><a href="#n"><span>모바일 App 안내</span></a></li>
+                                            <li><a href="#n"><span>제휴혜택 안내</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#n">WHAT'S NEW</a>
+                                        <ul class="depth2">
+                                            <li><a href="#n"><span>Event / News</span></a></li>
+                                            <li><a href="#n"><span>Notice</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#n">E-SHOP</a>
+                                        <ul class="depth2">
+                                            <li><a href="#n"><span>E-SHOP 소개</span></a></li>
+                                        </ul>
+                                    </li>
                                 </ul>
-                            </li>
-                            <li>
-                                <a href="#n">MENU</a>
-                                <ul class="depth2">
-                                    <li><a href="#n"><span>NEW</span></a></li>
-                                    <li><a href="#n"><span>COFFEE</span></a></li>
-                                    <li><a href="#n"><span>BEVERAGE</span></a></li>
-                                    <li><a href="#n"><span>ICE-CREAM</span></a></li>
-                                    <li><a href="#n"><span>FOOD</span></a></li>
-                                    <li><a href="#n"><span>PRODUCT</span></a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#n">STORE</a>
-                                <ul class="depth2">
-                                    <li><a href="#n"><span>매장찾기</span></a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#n">SOCIETY</a>
-                                <ul class="depth2">
-                                    <li><a href="#n"><span>Paul Bassett Society</span></a></li>
-                                    <li><a href="#n"><span>회원 등급 혜택/span></a></li>
-                                    <li><a href="#n"><span>e-Card 선물</span></a></li>
-                                    <li><a href="#n"><span>모바일 App 안내</span></a></li>
-                                    <li><a href="#n"><span>제휴혜택 안내</span></a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#n">WHAT'S NEW</a>
-                                <ul class="depth2">
-                                    <li><a href="#n"><span>Event / News</span></a></li>
-                                    <li><a href="#n"><span>Notice</span></a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#n">E-SHOP</a>
-                                <ul class="depth2">
-                                    <li><a href="#n"><span>E-SHOP 소개</span></a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                            </div>
+                        <button class="gnb_close">메뉴닫기</button>
+                        
                     </nav>
                 </div><!--header_sub-->
             </div><!--wrapper-->
