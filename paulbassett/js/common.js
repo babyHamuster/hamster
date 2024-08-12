@@ -69,4 +69,33 @@ $(document).ready(function(){
     $('header').removeClass('menu_over')
     $('header  .header_sub .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
    })
+
+
+   /*
+        모바일 메뉴
+        header  .header_sub .gnb .gnb_wrap ul.depth1 > li > a를 클릭했을때
+
+        1차 메뉴 a의 href값을 무력화 ( 즉, 클릭해도 해당 페이지로 이동 X )
+        li에 open클래스 추가
+        열려있는 메뉴 클릭 > 닫힘 / 닫힌 메뉴 클릭 > 열림
+        (동시에 여러개 메뉴 열릴 수 있음)
+   */
+   $('header .header_sub .gnb .gnb_wrap .depth1 > li > a').on('click', function(e){
+        if(pc_mobile == 'mo'){ //모바일에서 적용
+            e.preventDefault(); /* a 태그의 href를 작동 시키지 않음 */
+            $(this).parent().toggleClass('open')
+        }
+   })
+
+   $('header  .header_sub .gnb .gnb_open').on('click', function(){
+        $('header').addClass('menu_open')
+        /* 하단 스크롤 금지 */
+        $("html, body").css({overflow : "hidden", height : $(window).height()}).bind("scroll touchmove mousewheel", function(e){e.preventDefault();e.stopPropagation();return false;},function(){passive:false});
+   })
+   $('header  .header_sub .gnb .gnb_close').on('click', function(){
+        $('header').removeClass('menu_open')
+        /* 하단 스크롤 금지 해제 */
+        $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
+   })
+
 })//$(document).ready
