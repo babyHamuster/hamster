@@ -10,6 +10,8 @@
     <script src="js/main.js"></script>
     <!--slick 을 돌아가게 하는 값-->
     <script src="js/slick.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
     <link rel="stylesheet" href="css/slick.css">
     <title>Paul Bassett</title>
 </head>
@@ -124,12 +126,12 @@
                     </div>
                 </div>
             </section>
-            <section class="menu">
+            <section class="menu" >
                 <div class="tit">
-                    <h2>Menu</h2>
-                    <p>최상의 품질과 서비스를 제공하는 전문 바리스타</p>
+                    <h2 >Menu</h2>
+                    <p >최상의 품질과 서비스를 제공하는 전문 바리스타</p>
                 </div>
-                <div class="list">
+                <div class="list" >
                     <div class="popup">
                         <div class="popup_item">
                             <a href="#n">
@@ -387,7 +389,7 @@
                     <li class="q04"><button class="top"><span>TOP</span></button></li>
                 </ul>
             </div>
-            <button title="퀵메뉴 닫기" class="close">닫기</button>
+            <button title="퀵메뉴 닫기" class="close">CLOSE</button>
         </aside>
         <footer>
             <div class="wrapper">
@@ -421,5 +423,12 @@
             </div>
         </footer>
     </div>
+    <script>
+        AOS.init({
+        offset: 0, 
+        duration: 500, 
+        easing: 'ease', 
+        });
+        </script>
 </body>
 </html>

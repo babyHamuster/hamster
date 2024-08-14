@@ -207,6 +207,7 @@
     line-height: 1;
     font-size: var(--txt-size-tit);
     color: var(--txt-color-tit);
+    
 }
 .md .list .popup .popup_item {
     margin: 0 12px;
@@ -224,6 +225,8 @@
 }
 .md .list .popup .popup_item h3 {
     color: var(--txt-color-tit);
+    padding-top: 15px;
+    font-weight: 700;
 }
 @media screen and (max-width:1024px){
     .md .list .popup .popup_item {
