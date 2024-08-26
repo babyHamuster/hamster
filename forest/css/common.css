@@ -27,6 +27,12 @@ html, body {
 }
 /* 1260px 나의 wrapper의 넓이에 좌우 여백 20px씩 추가한 사이즈부터
    반응형 */
+@media screen and (max-width:1600px){
+    .wrapper {
+        width: auto;
+        margin: 0 130px ;
+    }
+}
 @media screen and (max-width:1300px){
     html, body {
         font-size: 15px;
